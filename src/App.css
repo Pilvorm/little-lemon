@@ -1,16 +1,281 @@
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Rosarivo:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Rosarivo:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Rosarivo:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Rosarivo:ital@0;1&display=swap");
+::-webkit-scrollbar {
+  width: 14px;
+}
 
-/* .markazi-text-<uniquifier> {
+::-webkit-scrollbar-thumb {
+  background-color: #495e57;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 0;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
+}
+
+.markazi {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
 }
 
-.karla-<uniquifier> {
+.karla {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
-} */
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav {
+  color: white;
+  padding: 24px 256px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.15s linear;
+}
+nav img {
+  width: 180px;
+}
+nav ul {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+nav li {
+  list-style-type: none;
+}
+nav a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.075s ease-in;
+}
+nav a:hover {
+  color: #f4ce14;
+  transition: all 0.075s ease-in;
+}
+
+.nav-background {
+  color: black;
+  background-color: #f5f6f6;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.nav-background a:hover {
+  color: #495e57;
+  transition: all 0.075s ease-in;
+}
+
+.hidden {
+  top: -120px;
+  transition: all 0.15s linear;
+}
+
+header {
+  background-attachment: fixed;
+  background-color: #495e57;
+  background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent), url("./assets/restauranfood.jpg");
+  background-size: cover;
+  background-position: 0% 60%;
+  color: white;
+  padding: 172px 256px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+header .title h1 {
+  font-size: 7.2rem;
+  font-weight: 400;
+  color: #f4ce14;
+  line-height: 1;
+}
+header .title a {
+  color: inherit;
+  font-size: 6.4rem;
+  line-height: 1;
+  position: relative;
+  transition: all 0.075s ease-in;
+}
+header .title a i {
+  display: inline-block;
+  opacity: 0;
+  transition: all 0.075s ease-in;
+  transform: translateX(-5px);
+}
+header .title a:hover > i {
+  opacity: 1;
+  transition: all 0.075s ease-in;
+  transform: none;
+}
+header .title a:hover {
+  color: white;
+  /* font-size: 1.15em; */
+  transition: 0.125s all ease-in-out;
+}
+header .title a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header .title a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+header p {
+  font-size: 2rem;
+  width: 35%;
+}
+header .reserve-btn {
+  cursor: pointer;
+  font-size: 1.6rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #f4ce14;
+  border-radius: 4px;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end stretch;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+header .reserve-btn:before, header .reserve-btn:after {
+  content: "";
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  z-index: -1;
+  top: 150%;
+  transition: all 0.7s ease;
+}
+header .reserve-btn:before {
+  border-radius: 60% 70% 20% 40%;
+  background: #f4ce14;
+  opacity: 0.2;
+  animation: water 6s ease-in-out infinite both alternate;
+}
+header .reserve-btn:after {
+  border-radius: 60% 70% 20% 40%;
+  background: #f4ce14;
+  opacity: 0.5;
+  animation: water 7s ease-in-out infinite both alternate;
+}
+header .reserve-btn:hover {
+  background: #f4ce14;
+  color: black;
+}
+header .reserve-btn:hover:before, header .reserve-btn:hover:after {
+  opacity: 1;
+  top: -100%;
+}
+header .socials {
+  display: flex;
+  gap: 16px;
+}
+header .socials a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.075s ease-in;
+}
+header .socials a:hover {
+  color: #f4ce14;
+  transition: all 0.075s ease-in;
+}
+
+main {
+  padding: 64px 256px;
+}
+main h2 {
+  font-size: 4rem;
+}
+main img {
+  width: 350px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+main .special-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .special-header a {
+  font-size: 1.6rem;
+  padding: 12px 20px;
+  background-color: #f4ce14;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  transition: all 0.075s ease-in;
+}
+main .special-header a:hover {
+  background-color: white;
+  transition: all 0.075s ease-in;
+}
+main .specials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+main .special-card {
+  background-color: #edefee;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+main h3 {
+  color: #495e57;
+  font-size: 3rem;
+}
+
+@keyframes water {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    border-radius: 50% 63% 80% 49%;
+  }
+  40% {
+    border-radius: 60% 64% 64% 48%;
+  }
+  60% {
+    border-radius: 80% 63% 51% 49%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58%;
+  }
+  100% {
+    border-radius: 62% 67% 70% 53%;
+    transform: rotate(180deg);
+  }
+}/*# sourceMappingURL=App.css.map */

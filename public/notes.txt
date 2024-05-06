@@ -1,0 +1,43 @@
+.reserve-btn {
+    position: relative;
+    text-decoration: none;
+    color: $primary-yellow;
+    border: 1px solid $primary-yellow;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end stretch;
+    z-index: 1;
+    transition: all .5s ease;
+    &:before, &:after {
+        content: "";
+        height: 500px;
+        width: 500px;
+        position: absolute;
+        z-index: -1;
+        top: 150%;
+        transition: all .7s ease;
+      }
+    &:before {
+        border-radius: 60% 70% 20% 40%;
+        background: $primary-yellow;
+        opacity: .2;
+        animation: water 6s ease-in-out infinite both alternate;
+      }
+      &:after {
+        border-radius: 60% 70% 20% 40%;
+        background: $primary-yellow;
+        opacity: .5;
+        animation: water 7s ease-in-out infinite both alternate;
+      }
+    &:hover {
+      background: $primary-yellow;
+      color: white;
+      &:before, &:after {
+          opacity: 1;
+          top: -100%;
+        }
+    }
+  }
