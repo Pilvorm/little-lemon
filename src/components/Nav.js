@@ -22,7 +22,7 @@ function Nav({background}) {
 
   return (
     <nav className={`${!show && 'hidden'} ${background && 'nav-background'}`}>
-      <img src={Logo} />
+      <img src={Logo} className="white-fill"/>
       <ul>
         <li>
           <a>Home</a>
@@ -42,12 +42,12 @@ function Nav({background}) {
         </li>
         <li>
           <a>
-            <FaInstagram size={18} />
+            <FaInstagram size={24} />
           </a>
         </li>
         <li>
           <a>
-            <FaFacebookF size={18} />
+            <FaFacebookF size={24} />
           </a>
         </li>
       </ul>

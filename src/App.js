@@ -10,11 +10,11 @@ function App() {
   const { ref: myRef, inView: isVisible } = useInView({
     threshold: 0.1,
   });
-  
+
   return (
     <>
       <Nav background={!isVisible}/>
-      <Header refff={myRef}/>
+      <Header refer={myRef}/>
       <Main/>
       <Footer/>
     </>
