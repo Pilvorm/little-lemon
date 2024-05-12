@@ -119,7 +119,7 @@ header {
   background-attachment: fixed;
   background-color: $primary-green;
   background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent),
-    url("./assets/restauranfood.jpg");
+    url("./assets/restauranfood-comp.jpg");
   background-size: cover;
   background-position: 0% 60%;
   color: white;
@@ -435,8 +435,8 @@ main {
     }
 
     h3 {
-      font-size: 3.6rem;
       color: $primary-green;
+      font-size: 3.6rem;
     }
 
     p {
@@ -451,6 +451,20 @@ main {
       font-weight: 500;
       font-size: 2rem;
       @extend .special-elite;
+    }
+  }
+
+  #testimonials {
+
+    .magazines {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    img {
+      height: 50px;
     }
   }
 }

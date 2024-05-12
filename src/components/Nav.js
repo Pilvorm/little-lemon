@@ -47,7 +47,7 @@ function Nav({background}) {
         </li>
         <li>
           <a>
-            <FaFacebookF size={24} />
+            <FaFacebookF size={22} />
           </a>
         </li>
       </ul>
