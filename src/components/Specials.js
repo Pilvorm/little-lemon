@@ -50,7 +50,7 @@ function Specials() {
     <section id="specials">
       <div className="special-header">
         <h2 className="special-elite">This Week's Specials</h2>
-        <a>Our Menu</a>
+        <a className="button-fill">Our Menu</a>
       </div>
       <div className="specials-list">
         {specials.map((food, idx) => (

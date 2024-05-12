@@ -25,7 +25,7 @@
   font-style: normal;
 }
 
-.special-elite {
+.special-elite, main #about span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -153,6 +153,7 @@ header p {
   font-size: 2rem;
   font-weight: 300;
   width: 35%;
+  line-height: 1.5;
 }
 header .reserve-btn {
   cursor: pointer;
@@ -224,17 +225,10 @@ main h2 {
   font-size: 3.6rem;
   color: #495e57;
 }
-main #specials {
-  padding: 86px 186px 100px 186px;
-  background-image: linear-gradient(180deg, rgba(242, 242, 242, 0.8), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
-  background-size: cover;
-}
-main #specials .special-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main #specials .special-header a {
+main .button-fill {
+  color: #495e57 !important;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.6rem;
   padding: 12px 32px;
   border-radius: 4px;
@@ -246,9 +240,20 @@ main #specials .special-header a {
   border: 1px solid #f4ce14;
   background-color: #f4ce14;
 }
-main #specials .special-header a:hover {
+main .button-fill:hover {
+  color: #333333 !important;
   background-color: transparent;
   transition: all 0.075s ease-in;
+}
+main #specials {
+  padding: 86px 186px 100px 186px;
+  background-image: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-size: cover;
+}
+main #specials .special-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 main #specials .specials-list {
   display: grid;
@@ -286,6 +291,7 @@ main #specials h3 {
 }
 main #specials p {
   font-size: 1.6rem;
+  line-height: 1.5;
 }
 main #specials .price-tag {
   color: #ee9972;
@@ -309,38 +315,53 @@ main #about .about-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-main #about .about-section .image {
+main #about .img-container {
+  padding: 0px;
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.5), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
-main #about .about-section img {
-  width: 80%;
+main #about .image-1 {
+  background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.5), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg.jpg");
+}
+main #about .image-2 {
+  background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.3), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg-3.jpg");
+  background-position: 50% 0;
+}
+main #about .image-3 {
+  background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.5), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg-4.jpg");
+  background-position: 0 100%;
+}
+main #about img {
+  width: 90%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main #about .about-section .about-description {
+main #about .about-description {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 32px;
   padding: 64px;
 }
-main #about .about-section h3 {
+main #about h3 {
   font-size: 3.6rem;
   color: #495e57;
 }
-main #about .about-section p {
+main #about p {
   color: #333333;
   font-size: 1.6rem;
   font-weight: 300;
-  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
-main #about .about-section span {
+main #about span {
   color: #495e57;
   font-weight: 500;
+  font-size: 2rem;
 }
 
 @keyframes water {

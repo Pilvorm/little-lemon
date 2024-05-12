@@ -1,11 +1,12 @@
 import restaurant from "../assets/restaurant-3.jpg";
 import founder from "../assets/carmy-sydney-4.jpg";
+import table from "../assets/restaurant-4.jpg";
 
 function About() {
   return (
     <section id="about">
       <div className="about-section">
-        <div className="image">
+        <div className="img-container image-1">
           <img src={restaurant} style={{ objectPosition: "0 60%" }} />
         </div>
         <div className="about-description">
@@ -36,15 +37,15 @@ function About() {
           </p>
         </div>
       </div>
+
       <div className="about-section">
         <div className="about-description">
           <h3 className="special-elite">How It Came to Be</h3>
           <p>
             Drawn together by their mutual love for Mediterranean cuisine and
             dedication to sustainable sourcing,{" "}
-            <span>Carmen "Carmy" Berzatto</span> and{" "}
-            <span>Sydney Adamu</span> embarked on a culinary adventure that
-            would soon captivate the city.
+            <span>Carmen "Carmy" Berzatto</span> and <span>Sydney Adamu</span>{" "}
+            embarked on a culinary adventure that would soon captivate the city.
           </p>
           <p>
             Inspired by their respective backgrounds — Carmy's roots in Greek
@@ -71,8 +72,29 @@ function About() {
             dishes, warm hospitality, and commitment to excellence.
           </p>
         </div>
-        <div className="image">
+        <div className="img-container image-2">
           <img src={founder} style={{ objectPosition: "55% 50%" }} />
+        </div>
+      </div>
+
+      <div className="about-section">
+        <div className="img-container image-3">
+          <img src={table} style={{ objectPosition: "0 60%" }} />
+        </div>
+        <div className="about-description">
+          <h3 className="special-elite">Reservation</h3>
+          <p>
+            Little Lemon is ideal for making special occasions, or for making
+            any occasion special.
+          </p>
+          
+          <p>
+            Secure a spot at Little Lemon for an unforgettable dining
+            experience. Personalize your reservations and we will be ready to
+            prioritize your comfort and satisfaction.
+          </p>
+
+          <a className="button-fill">Reserve a Table</a>
         </div>
       </div>
     </section>

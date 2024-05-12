@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Special+Elite&display=swap");
 
 $primary-green: #495e57;
 $primary-yellow: #f4ce14;
@@ -54,7 +54,6 @@ a {
 }
 
 nav {
-  // outline: 1px solid red;
   color: white;
   padding: 24px $x-space;
   display: flex;
@@ -73,10 +72,6 @@ nav {
   img {
     width: 180px;
   }
-
-  // .white-fill {
-  //   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(219deg) contrast(101%);
-  // }
 
   ul {
     display: flex;
@@ -137,6 +132,7 @@ header {
 
   .title {
     letter-spacing: 1px;
+
     h1 {
       font-size: 7.2rem;
       font-weight: 400;
@@ -193,6 +189,7 @@ header {
     font-size: 2rem;
     font-weight: 300;
     width: 35%;
+    line-height: 1.5;
   }
 
   .reserve-btn {
@@ -272,11 +269,33 @@ main {
     color: $primary-green;
   }
 
+  .button-fill {
+    color: $primary-green !important;
+    width: fit-content;
+    font-size: 1.6rem;
+    padding: 12px 32px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    transition: $text-transition;
+    text-transform: uppercase;
+    color: $highlight-black;
+    font-weight: 500;
+    border: 1px solid $primary-yellow;
+    background-color: $primary-yellow;
+
+    &:hover {
+      color: $highlight-black !important;
+      background-color: transparent;
+      transition: $text-transition;
+    }
+  }
+
   #specials {
     padding: 86px $x-space 100px $x-space;
     background-image: linear-gradient(
         180deg,
-        rgba(242, 242, 242, 0.8),
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.6),
         rgba(242, 242, 242, 0.5)
       ),
       url("./assets/lemon-bg.jpg");
@@ -286,24 +305,6 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      a {
-        font-size: 1.6rem;
-        padding: 12px 32px;
-        border-radius: 4px;
-        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-        transition: $text-transition;
-        text-transform: uppercase;
-        color: $highlight-black;
-        font-weight: 500;
-        border: 1px solid $primary-yellow;
-        background-color: $primary-yellow;
-
-        &:hover {
-          background-color: transparent;
-          transition: $text-transition;
-        }
-      }
     }
 
     .specials-list {
@@ -347,6 +348,7 @@ main {
 
     p {
       font-size: 1.6rem;
+      line-height: 1.5;
     }
 
     .price-tag {
@@ -377,51 +379,78 @@ main {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+    }
 
-      .image {
-        // outline: 1px solid red;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: linear-gradient(
-            180deg,
-            rgba(73, 94, 87, 0.5),
-            rgba(73, 94, 87, 0.5)
-          ),
-          url("./assets/plant-bg.jpg");
-        background-size: cover;
-      }
+    .img-container {
+      padding: 0px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
 
-      img {
-        width: 80%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-      }
+    .image-1 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(73, 94, 87, 0.5),
+          rgba(73, 94, 87, 0.5)
+        ),
+        url("./assets/plant-bg.jpg");
+    }
 
-      .about-description {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        padding: 64px;
-      }
+    .image-2 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(73, 94, 87, 0.3),
+          rgba(73, 94, 87, 0.5)
+        ),
+        url("./assets/plant-bg-3.jpg");
+      background-position: 50% 0;
+    }
 
-      h3 {
-        font-size: 3.6rem;
-        color: $primary-green;
-      }
+    .image-3 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(73, 94, 87, 0.5),
+          rgba(73, 94, 87, 0.5)
+        ),
+        url("./assets/plant-bg-4.jpg");
+      background-position: 0 100%;
+    }
 
-      p {
-        color: $highlight-black;
-        font-size: 1.6rem;
-        font-weight: 300;
-        letter-spacing: .5px;
-      }
-      
-      span {
-        color: $primary-green;
-        font-weight: 500;
-      }
+    img {
+      width: 90%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
 
+    .about-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+      padding: 64px;
+    }
+
+    h3 {
+      font-size: 3.6rem;
+      color: $primary-green;
+    }
+
+    p {
+      color: $highlight-black;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    span {
+      color: $primary-green;
+      font-weight: 500;
+      font-size: 2rem;
+      @extend .special-elite;
     }
   }
 }
