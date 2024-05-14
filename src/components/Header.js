@@ -6,7 +6,11 @@ function Header({ refer }) {
     <header ref={refer}>
       <div className="title">
         <h1 className="markazi">Little Lemon</h1>
-        <a href="https://maps.app.goo.gl/E1Z3Hr9m5SsuQQZi6" target="_blank" className="special-elite">
+        <a
+          href="https://maps.app.goo.gl/E1Z3Hr9m5SsuQQZi6"
+          target="_blank"
+          className="special-elite"
+        >
           Chicago{" "}
           <i>
             <TfiLocationPin size={32} />
@@ -18,14 +22,18 @@ function Header({ refer }) {
         served with a modern twist.
       </p>
       <a className="reserve-btn">Reserve a table</a>
-      <div className="socials">
-        <a>
-          <FaInstagram size={28} />
-        </a>
-        <a>
-          <FaFacebookF size={28} />
-        </a>
-      </div>
+      <ul className="socials">
+        <li>
+          <a>
+            <FaInstagram size={28} />
+          </a>
+        </li>
+        <li>
+          <a>
+            <FaFacebookF size={28} />
+          </a>
+        </li>
+      </ul>
     </header>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../assets/Logo.svg";
+import Logo from "../assets/LogoAlt.png";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -47,7 +47,7 @@ function Nav({background}) {
         </li>
         <li>
           <a>
-            <FaFacebookF size={22} />
+            <FaFacebookF size={24} />
           </a>
         </li>
       </ul>

@@ -6,28 +6,29 @@ const testimonial = [
   {
     logo: chicago,
     name: "The Chicago Times",
-    testimony: "LMAOOO"
+    testimony: "Little Lemon has captured the hearts of diners with their innovation.",
   },
   {
     logo: morbes,
     name: "Morbes",
-    testimony: "LMAOOO"
+    testimony: "A gem in Chicago's culinary crown. Little Lemon is a must-visit.",
   },
   {
     logo: state,
     name: "StateLiving",
-    testimony: "LMAOOO"
+    testimony: "Five-star Flavor. A meal at Little Lemon is an experience not to be missed.",
   },
 ];
 
 function Testimonials() {
   return (
     <div id="testimonials">
-      <div className="magazines">
-        {testimonial.map((magazine) => (
-            <img src={magazine.logo}/>
-        ))}
-      </div>
+      {testimonial.map((magazine) => (
+        <div className="magazines">
+          <img src={magazine.logo} />
+          <p className="special-elite">" {magazine.testimony} "</p>
+        </div>
+      ))}
     </div>
   );
 }

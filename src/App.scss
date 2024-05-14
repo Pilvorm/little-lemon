@@ -6,7 +6,7 @@ $secondary-cream: #ee9972;
 $secondary-cream-light: #fbdabb;
 $highlight-gray: #edefee;
 $highlight-black: #333333;
-$x-space: 186px;
+$x-space: 124px;
 $text-transition: all 0.075s ease-in;
 
 ::-webkit-scrollbar {
@@ -46,6 +46,21 @@ $text-transition: all 0.075s ease-in;
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-btn {
+  cursor: pointer;
+  transition: $text-transition;
+
+  &:hover {
+    color: $primary-yellow;
+    transition: $text-transition;
+  }
 }
 
 a {
@@ -88,12 +103,7 @@ nav {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: $text-transition;
-
-    &:hover {
-      color: $primary-yellow;
-      transition: $text-transition;
-    }
+    @extend .social-btn;
   }
 }
 
@@ -116,6 +126,8 @@ nav {
 }
 
 header {
+  @extend .flex-col;
+  gap: 32px;
   background-attachment: fixed;
   background-color: $primary-green;
   background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent),
@@ -124,9 +136,6 @@ header {
   background-position: 0% 60%;
   color: white;
   padding: 172px $x-space;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
@@ -248,17 +257,12 @@ header {
     display: flex;
     gap: 16px;
 
-    a {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      cursor: pointer;
-      transition: $text-transition;
+    li {
+      list-style-type: none;
+    }
 
-      &:hover {
-        color: $primary-yellow;
-        transition: $text-transition;
-      }
+    a {
+      @extend .social-btn;
     }
   }
 }
@@ -270,21 +274,19 @@ main {
   }
 
   .button-fill {
-    color: $primary-green !important;
+    color: $highlight-black;
     width: fit-content;
     font-size: 1.6rem;
     padding: 12px 32px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    transition: $text-transition;
     text-transform: uppercase;
-    color: $highlight-black;
     font-weight: 500;
     border: 1px solid $primary-yellow;
     background-color: $primary-yellow;
-
+    transition: $text-transition;
+    
     &:hover {
-      color: $highlight-black !important;
       background-color: transparent;
       transition: $text-transition;
     }
@@ -322,17 +324,15 @@ main {
     }
 
     .special-card {
+      @extend .flex-col;
       background-color: white;
       border-radius: 4px;
-      display: flex;
-      flex-direction: column;
       box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     }
 
     .special-details {
+      @extend .flex-col;
       margin: 20px 20px;
-      display: flex;
-      flex-direction: column;
       gap: 16px;
     }
 
@@ -407,7 +407,7 @@ main {
           rgba(73, 94, 87, 0.5)
         ),
         url("./assets/plant-bg-3.jpg");
-      background-position: 50% 0;
+      background-position: 0 0;
     }
 
     .image-3 {
@@ -427,8 +427,7 @@ main {
     }
 
     .about-description {
-      display: flex;
-      flex-direction: column;
+      @extend .flex-col;
       justify-content: center;
       gap: 32px;
       padding: 64px;
@@ -455,16 +454,145 @@ main {
   }
 
   #testimonials {
+    padding: 64px $x-space;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url("./assets/lemon-bg.jpg");
+    background-size: cover;
 
     .magazines {
-      display: flex;
-      align-items: center;
+      @extend .flex-col;
       justify-content: center;
-      gap: 32px;
+      align-items: center;
+      gap: 8px;
+      color: $primary-green;
     }
 
     img {
-      height: 50px;
+      width: fit-content;
+      height: 40px;
+      // outline: 1px solid red;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.8rem;
+      width: 75%;
+    }
+  }
+}
+
+footer {
+  @extend .flex-col;
+  gap: 54px;
+  padding: 24px $x-space;
+  color: white;
+  background-color: $primary-green;
+  background-image: linear-gradient(
+      180deg,
+      rgba(73, 94, 87, 0.8),
+      rgba(73, 94, 87, 0.8)
+    ),
+    url("./assets/plant-bg-5.jpg");
+  background-position: 0 0;
+  background-size: cover;
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  .upper,
+  .lower {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // outline: 1px solid red;
+  }
+
+  .mid {
+    display: flex;
+    justify-content: center;
+  }
+
+  .right {
+    justify-self: flex-end;
+  }
+
+  .info {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
+  }
+
+  .hours, .newsletter {
+    @extend .flex-col;
+    gap: 8px;
+  }
+
+  .hours {
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  form {
+    input {
+      width: 500px;
+      padding: 12px 16px;
+      background-color: white;
+      border-radius: 4px;
+      border: none;
+    }
+
+    button {
+      margin-left: 8px;
+      cursor: pointer;
+      background-color: transparent;
+      color: white;
+      border: 2px solid $primary-yellow;
+      border-radius: 4px;
+      text-transform: uppercase;
+      padding: 11px 32px;
+      font-weight: 500;
+      transition: $text-transition;
+
+      &:hover {
+        background-color: $primary-yellow;
+        color: $highlight-black;
+      }
+      
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      @extend .social-btn;
+    }
+  }
+
+  .footer-nav {
+    gap: 32px;
+
+    a {
+      @extend .social-btn;
     }
   }
 }
