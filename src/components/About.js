@@ -7,7 +7,7 @@ function About() {
     <section id="about">
       <div className="about-section">
         <div className="img-container image-1">
-          <img src={restaurant} style={{ objectPosition: "0 60%" }} />
+          <img alt="Little Lemon Restaurant" src={restaurant} style={{ objectPosition: "0 60%" }} />
         </div>
         <div className="about-description">
           <h3 className="special-elite">Little Lemon</h3>
@@ -47,13 +47,13 @@ function About() {
             <span>Carmen "Carmy" Berzatto</span> and <span>Sydney Adamu</span>{" "}
             embarked on a culinary adventure that would soon captivate the city.
           </p>
-          <p>
+          {/* <p>
             Inspired by their respective backgrounds — Carmy's roots in Greek
             and Italian traditions, and Sydney's upbringing surrounded by the
             vibrant flavors of North Africa — the duo envisioned a restaurant
             that would celebrate the diverse tapestry of Mediterranean flavors
             while embracing modern culinary techniques.
-          </p>
+          </p> */}
 
           <p>
             With Carmy's expertise in traditional recipes passed down through
@@ -73,13 +73,13 @@ function About() {
           </p>
         </div>
         <div className="img-container image-2">
-          <img src={founder} style={{ objectPosition: "55% 50%" }} />
+          <img alt="Little Lemon Founder" src={founder} style={{ objectPosition: "55% 50%" }} />
         </div>
       </div>
 
       <div className="about-section">
         <div className="img-container image-3">
-          <img src={table} style={{ objectPosition: "0 60%" }} />
+          <img alt="Little Lemon Restaurant Table" src={table} style={{ objectPosition: "0 60%" }} />
         </div>
         <div className="about-description">
           <h3 className="special-elite">Reservation</h3>
@@ -94,7 +94,7 @@ function About() {
             prioritize your comfort and satisfaction.
           </p>
 
-          <a className="button-fill">Reserve a Table</a>
+          <button className="button-fill">Reserve a Table</button>
         </div>
       </div>
     </section>

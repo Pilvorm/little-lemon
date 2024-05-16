@@ -30,7 +30,7 @@ const specials = [
 function Card({ image, name, price, description }) {
   return (
     <div className="special-card">
-      <img src={image} />
+      <img alt={name} src={image} />
       <div className="special-details">
         <div className="special-header">
           <h3 className="markazi">{name}</h3>
@@ -50,7 +50,7 @@ function Specials() {
     <section id="specials">
       <div className="special-header">
         <h2 className="special-elite">This Week's Specials</h2>
-        <a className="button-fill">Our Menu</a>
+        <button className="button-fill">Our Menu</button>
       </div>
       <div className="specials-list">
         {specials.map((food, idx) => (

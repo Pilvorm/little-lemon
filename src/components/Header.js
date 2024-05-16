@@ -7,30 +7,29 @@ function Header({ refer }) {
       <div className="title">
         <h1 className="markazi">Little Lemon</h1>
         <a
+          className="special-elite"
           href="https://maps.app.goo.gl/E1Z3Hr9m5SsuQQZi6"
           target="_blank"
-          className="special-elite"
+          rel="noreferrer"
         >
-          Chicago{" "}
-          <i>
-            <TfiLocationPin size={32} />
-          </i>
+          <p>Chicago</p>
+          <TfiLocationPin size={36} />
         </a>
       </div>
       <p>
         A family-owned Mediterranean restaurant, focused on traditional recipes
         served with a modern twist.
       </p>
-      <a className="reserve-btn">Reserve a table</a>
+      <button className="reserve-btn">Reserve a table</button>
       <ul className="socials">
         <li>
-          <a>
-            <FaInstagram size={28} />
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <FaInstagram size={24} />
           </a>
         </li>
         <li>
-          <a>
-            <FaFacebookF size={28} />
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <FaFacebookF size={24} />
           </a>
         </li>
       </ul>

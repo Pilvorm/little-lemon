@@ -24,8 +24,8 @@ function Testimonials() {
   return (
     <div id="testimonials">
       {testimonial.map((magazine) => (
-        <div className="magazines">
-          <img src={magazine.logo} />
+        <div key={magazine.name} className="magazines">
+          <img alt={`${magazine.name} Logo`} src={magazine.logo} />
           <p className="special-elite">" {magazine.testimony} "</p>
         </div>
       ))}
