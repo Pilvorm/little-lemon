@@ -37,17 +37,20 @@
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, main #testimonials .magazines, main #about .about-description, main #specials .special-details, main #specials .special-card, header {
+footer .newsletter, footer, main #testimonials .magazines, main #about .about-description, main #specials .card-details, main #specials .special-card, header, .offcanvas .offcanvas-nav {
   display: flex;
   flex-direction: column;
 }
 
-.to-yellow, footer a, footer .lower button, header .socials a, nav button,
+.to-yellow, footer a,
+footer .lower button, header .socials a, nav button,
 nav a {
   cursor: pointer;
+  color: white;
   transition: all 0.075s ease-in;
 }
-.to-yellow:hover, footer a:hover, footer .lower button:hover, header .socials a:hover, nav button:hover,
+.to-yellow:hover, footer a:hover,
+footer .lower button:hover, header .socials a:hover, nav button:hover,
 nav a:hover {
   color: #f4ce14 !important;
   transition: all 0.075s ease-in;
@@ -71,7 +74,8 @@ h1,
 h2,
 h3,
 h4,
-p, ul {
+p,
+ul {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -104,33 +108,60 @@ nav {
   z-index: 999;
   transition: all 0.3s linear;
 }
-nav img {
-  width: 165px;
-}
-nav ul {
+nav .nav-links {
   display: flex;
   gap: 36px;
   align-items: center;
   margin: 0;
 }
-nav li {
-  list-style-type: none;
-}
 nav button,
 nav a {
-  color: white;
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-nav .burger {
+
+.logo {
+  width: 165px;
+}
+
+.burger {
   cursor: pointer;
   display: flex;
   gap: 8px;
   align-items: center;
   font-size: 1.6rem;
   text-transform: uppercase;
+}
+
+.offcanvas {
+  background-color: rgb(255, 255, 255);
+}
+.offcanvas * {
+  color: #333333;
+}
+.offcanvas .offcanvas-header {
+  padding: 24px 16px;
+  justify-content: space-between;
+}
+.offcanvas .offcanvas-body {
+  padding: 32px 16px;
+}
+.offcanvas .offcanvas-nav {
+  gap: 36px;
+}
+.offcanvas .offcanvas-nav button {
+  width: 100%;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.offcanvas .offcanvas-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .nav-background {
@@ -267,13 +298,6 @@ header .socials {
   display: flex;
   gap: 16px;
 }
-header .socials li {
-  list-style-type: none;
-}
-header .socials a {
-  color: white;
-}
-
 main h2 {
   font-size: 3.6rem;
   color: #495e57;
@@ -324,11 +348,11 @@ main #specials .special-card {
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
-main #specials .special-details {
+main #specials .card-details {
   margin: 20px 20px;
   gap: 16px;
 }
-main #specials .special-header {
+main #specials .card-header {
   display: flex;
   justify-content: space-between;
 }
@@ -353,9 +377,6 @@ main #specials .price-tag-decimal {
 }
 main #specials .description {
   color: #333333;
-}
-main #specials .order {
-  color: #fbdabb;
 }
 main #about .about-section {
   display: grid;
@@ -446,9 +467,6 @@ footer {
   font-size: 1.6rem;
   font-weight: 300;
 }
-footer a, footer .lower button {
-  color: white;
-}
 footer .upper,
 footer .lower {
   display: grid;
@@ -489,13 +507,10 @@ footer form button {
   padding: 11px 32px;
   transition: all 0.075s ease-in;
 }
-footer ul {
+footer .footer-socials {
   display: flex;
   justify-content: center;
   gap: 16px;
-}
-footer ul li {
-  list-style-type: none;
 }
 footer .footer-nav {
   gap: 32px;
@@ -522,21 +537,31 @@ footer .footer-nav {
     transform: rotate(180deg);
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   nav {
     padding: 24px 64px;
-  }
-  nav img {
-    width: 135px;
   }
   nav a {
     font-size: 1.4rem;
   }
+  .logo {
+    width: 135px;
+  }
   header {
-    padding: 172px 64px;
+    padding: 132px 64px;
   }
   main #specials {
     padding: 86px 64px 100px 64px;
+  }
+  main #specials .specials-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main #specials img {
+    height: 375px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 4px 4px 0 0;
   }
   main #testimonials {
     padding: 64px 64px;
@@ -550,5 +575,74 @@ footer .footer-nav {
   }
   footer {
     padding: 24px 64px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  nav {
+    padding: 24px 16px;
+  }
+  header {
+    padding: 132px 16px;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("./assets/restauranfood-comp.jpg");
+    background-position: 50% 60%;
+  }
+  header .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .title a svg {
+    display: none;
+  }
+  header p {
+    width: 75%;
+    text-align: center;
+  }
+  main h2 {
+    font-size: 2.8rem;
+  }
+  main #specials {
+    padding: 86px 16px 100px 16px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  }
+  main #specials .special-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  main #specials .specials-list {
+    display: flex;
+    flex-direction: column;
+  }
+  main #specials img {
+    height: 275px;
+  }
+  main #specials .special-card {
+    width: 100%;
+  }
+  main #specials .card-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  main #specials h3 {
+    color: #495e57;
+    font-size: 3.2rem;
+  }
+  main #specials p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  main #testimonials {
+    padding: 64px 16px;
+  }
+  main #testimonials img {
+    height: 40px;
+  }
+  main #testimonials p {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  footer {
+    padding: 24px 16px;
   }
 }/*# sourceMappingURL=App.css.map */

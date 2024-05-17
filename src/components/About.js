@@ -7,7 +7,11 @@ function About() {
     <section id="about">
       <div className="about-section">
         <div className="img-container image-1">
-          <img alt="Little Lemon Restaurant" src={restaurant} style={{ objectPosition: "0 60%" }} />
+          <img
+            alt="Little Lemon Restaurant"
+            src={restaurant}
+            style={{ objectPosition: "0 60%" }}
+          />
         </div>
         <div className="about-description">
           <h3 className="special-elite">Little Lemon</h3>
@@ -17,11 +21,11 @@ function About() {
             of Mediterranean flavors with a modern twist that reflects the
             dynamic spirit of our beloved city.
           </p>
-          <p>
+          {/* <p>
             Central to our culinary philosophy is a steadfast commitment to
             sourcing the finest, locally grown ingredients. We ensure that every
             ingredient that graces your plate is of the highest quality.
-          </p>
+          </p> */}
 
           <p>
             Our team at Little Lemon is passionate about providing an
@@ -56,12 +60,11 @@ function About() {
           </p> */}
 
           <p>
-            With Carmy's expertise in traditional recipes passed down through
-            generations and Sydney's innovative approach to flavor pairings and
-            presentation, Little Lemon was born. Together, they poured their
-            hearts and souls into creating a dining experience that would
-            transport guests to the sun-drenched shores of the Mediterranean,
-            right here in Chicago.
+            With Carmy's expertise in traditional recipes and Sydney's
+            innovative approach to flavor pairings and presentation, Little
+            Lemon was born. Together, they poured their hearts and souls into
+            creating a dining experience that would transport guests to the
+            sun-drenched shores of the Mediterranean, right here in Chicago.
           </p>
 
           <p>
@@ -73,13 +76,21 @@ function About() {
           </p>
         </div>
         <div className="img-container image-2">
-          <img alt="Little Lemon Founder" src={founder} style={{ objectPosition: "55% 50%" }} />
+          <img
+            alt="Little Lemon Founder"
+            src={founder}
+            style={{ objectPosition: "55% 50%" }}
+          />
         </div>
       </div>
 
       <div className="about-section">
         <div className="img-container image-3">
-          <img alt="Little Lemon Restaurant Table" src={table} style={{ objectPosition: "0 60%" }} />
+          <img
+            alt="Little Lemon Restaurant Table"
+            src={table}
+            style={{ objectPosition: "0 60%" }}
+          />
         </div>
         <div className="about-description">
           <h3 className="special-elite">Reservation</h3>
@@ -87,7 +98,7 @@ function About() {
             Little Lemon is ideal for making special occasions, or for making
             any occasion special.
           </p>
-          
+
           <p>
             Secure a spot at Little Lemon for an unforgettable dining
             experience. Personalize your reservations and we will be ready to

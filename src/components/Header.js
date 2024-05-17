@@ -21,18 +21,14 @@ function Header({ refer }) {
         served with a modern twist.
       </p>
       <button className="reserve-btn">Reserve a table</button>
-      <ul className="socials">
-        <li>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-            <FaInstagram size={24} />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-            <FaFacebookF size={24} />
-          </a>
-        </li>
-      </ul>
+      <div className="socials">
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <FaInstagram size={24} />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <FaFacebookF size={24} />
+        </a>
+      </div>
     </header>
   );
 }

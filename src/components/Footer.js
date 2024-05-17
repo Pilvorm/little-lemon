@@ -16,8 +16,7 @@ function Footer() {
     <footer>
       <div className="upper">
         <p>140 West 4th Street | NY, NY 10012</p>
-        <ul>
-          <li>
+        <div className="footer-socials">
             <a
               href="https://www.instagram.com/"
               target="_blank"
@@ -25,8 +24,6 @@ function Footer() {
             >
               <FaInstagram size={24} />
             </a>
-          </li>
-          <li>
             <a
               href="https://www.facebook.com/"
               target="_blank"
@@ -34,8 +31,7 @@ function Footer() {
             >
               <FaFacebookF size={24} />
             </a>
-          </li>
-        </ul>
+        </div>
         <p className="right">+1 (347) 799-1312</p>
       </div>
       <div className="mid info">

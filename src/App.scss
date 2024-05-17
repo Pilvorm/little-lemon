@@ -9,6 +9,7 @@ $highlight-black: #333333;
 $text-danger: #dc3545;
 $x-space: 124px;
 $x-space-tablet: 64px;
+$x-space-phone: 16px;
 $text-transition: all 0.075s ease-in;
 
 ::-webkit-scrollbar {
@@ -62,6 +63,7 @@ $text-transition: all 0.075s ease-in;
 
 .to-yellow {
   cursor: pointer;
+  color: white;
   transition: $text-transition;
 
   &:hover {
@@ -89,7 +91,8 @@ h1,
 h2,
 h3,
 h4,
-p, ul {
+p,
+ul {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -124,38 +127,69 @@ nav {
   z-index: 999;
   transition: all 0.3s linear;
 
-  img {
-    width: 165px;
-  }
-
-  ul {
+  .nav-links {
     display: flex;
     gap: 36px;
     align-items: center;
     margin: 0;
   }
 
-  li {
-    list-style-type: none;
-  }
-
   button,
   a {
-    color: white;
     font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     @extend .to-yellow;
   }
+}
 
-  .burger {
-    cursor: pointer;
+.logo {
+  width: 165px;
+}
+
+.burger {
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.offcanvas {
+  background-color: rgba(255, 255, 255, 1);
+
+  & * {
+    color: $highlight-black;
+  }
+
+  .offcanvas-header {
+    padding: 24px 16px;
+    justify-content: space-between;
+  }
+
+  .offcanvas-body {
+    padding: 32px 16px;
+  }
+
+  .offcanvas-nav {
+    @extend .flex-col;
+    gap: 36px;
+
+    button {
+      width: 100%;
+      text-align: right;
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .offcanvas-socials {
     display: flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 1.6rem;
-    text-transform: uppercase;
+    justify-content: flex-end;
+    gap: 16px;
   }
 }
 
@@ -311,12 +345,7 @@ header {
     display: flex;
     gap: 16px;
 
-    li {
-      list-style-type: none;
-    }
-
     a {
-      color: white;
       @extend .to-yellow;
     }
   }
@@ -385,13 +414,13 @@ main {
       box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     }
 
-    .special-details {
+    .card-details {
       @extend .flex-col;
       margin: 20px 20px;
       gap: 16px;
     }
 
-    .special-header {
+    .card-header {
       display: flex;
       justify-content: space-between;
     }
@@ -422,10 +451,6 @@ main {
 
     .description {
       color: $highlight-black;
-    }
-
-    .order {
-      color: $secondary-cream-light;
     }
   }
 
@@ -562,8 +587,8 @@ footer {
   font-size: 1.6rem;
   font-weight: 300;
 
-  a, .lower button {
-    color: white;
+  a,
+  .lower button {
     @extend .to-yellow;
   }
 
@@ -622,14 +647,10 @@ footer {
     }
   }
 
-  ul {
+  .footer-socials {
     display: flex;
     justify-content: center;
     gap: 16px;
-
-    li {
-      list-style-type: none;
-    }
   }
 
   .footer-nav {
@@ -660,26 +681,37 @@ footer {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   nav {
     padding: 24px $x-space-tablet;
-
-    img {
-      width: 135px;
-    }
 
     a {
       font-size: 1.4rem;
     }
   }
 
+  .logo {
+    width: 135px;
+  }
+
   header {
-    padding: 172px $x-space-tablet;
+    padding: 132px $x-space-tablet;
   }
 
   main {
     #specials {
       padding: 86px $x-space-tablet 100px $x-space-tablet;
+
+      .specials-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+  
+      img {
+        height: 375px;
+        object-fit: cover;
+        border-radius: 4px 4px 0 0;
+      }
     }
 
     #testimonials {
@@ -698,5 +730,105 @@ footer {
 
   footer {
     padding: 24px $x-space-tablet;
+  }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  nav {
+    padding: 24px $x-space-phone;
+  }
+
+  header {
+    padding: 132px $x-space-phone;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)),
+    url("./assets/restauranfood-comp.jpg");
+    background-position: 50% 60%;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        svg {
+          display: none;
+        }
+      }
+    }
+  
+    p {
+      width: 75%;
+      text-align: center;
+    }
+  }
+
+  main {
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    #specials {
+      padding: 86px $x-space-phone 100px $x-space-phone;
+      background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.6),
+        rgba(242, 242, 242, 0.5)
+      ),
+      url("./assets/lemon-bg.jpg");
+
+      .special-header {
+        flex-direction: column;
+        gap: 16px;
+      }
+  
+      .specials-list {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      img {
+        height: 275px;
+      }
+  
+      .special-card {
+        width: 100%;
+      }
+
+      .card-details {
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      h3 {
+        color: $primary-green;
+        font-size: 3.2rem;
+      }
+  
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+    }
+
+    #testimonials {
+      padding: 64px $x-space-phone;
+
+      img {
+        height: 40px;
+      }
+
+      p {
+        font-size: 1.4rem;
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    padding: 24px $x-space-phone;
   }
 }

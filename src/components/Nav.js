@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logo from "../assets/LogoAlt.png";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
-import { RiMenu3Fill } from "react-icons/ri";
+import { RiMenu3Fill, RiCloseLargeFill } from "react-icons/ri";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "reactstrap";
@@ -35,9 +35,9 @@ function Nav({ background }) {
 
   return (
     <nav className={`${!show && "hidden"} ${background && "nav-background"}`}>
-      <img alt="Little Lemon Logo" src={Logo} className="white-fill" />
+      <img alt="Little Lemon Logo" src={Logo} className="logo" />
       {isMobileWidth ? (
-        <div>
+        <>
           <button className="burger" onClick={toggleOffcanvas}>
             <RiMenu3Fill size={24} />
             <p>Menu</p>
@@ -47,45 +47,52 @@ function Nav({ background }) {
             toggle={toggleOffcanvas}
             direction="end"
           >
-            <OffcanvasHeader closeButton>Offcanvas</OffcanvasHeader>
-            <OffcanvasBody>
-              <strong>This is the Offcanvas body.</strong>
-            </OffcanvasBody>
+            <div className="offcanvas-header">
+              <img alt="Little Lemon Logo" src={Logo} className="logo" />
+              <button className="burger" onClick={toggleOffcanvas}>
+                <RiCloseLargeFill size={24} />
+                <p>Close</p>
+              </button>
+            </div>
+            <div className="offcanvas-body">
+              <div className="offcanvas-nav">
+                <button>Home</button>
+                <button>About</button>
+                <button>Menu</button>
+                <button>Reservations</button>
+                <div className="offcanvas-socials">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaInstagram size={24} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaFacebookF size={24} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </Offcanvas>
-        </div>
+        </>
       ) : (
-        <ul>
-          <li>
-            <button>Home</button>
-          </li>
-          <li>
-            <button>About</button>
-          </li>
-          <li>
-            <button>Menu</button>
-          </li>
-          <li>
-            <button>Reservations</button>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaInstagram size={24} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookF size={24} />
-            </a>
-          </li>
-        </ul>
+        <div className="nav-links">
+          <button>Home</button>
+          <button>About</button>
+          <button>Menu</button>
+          <button>Reservations</button>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <FaFacebookF size={24} />
+          </a>
+        </div>
       )}
     </nav>
   );

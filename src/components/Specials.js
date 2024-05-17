@@ -31,8 +31,8 @@ function Card({ image, name, price, description }) {
   return (
     <div className="special-card">
       <img alt={name} src={image} />
-      <div className="special-details">
-        <div className="special-header">
+      <div className="card-details">
+        <div className="card-header">
           <h3 className="markazi">{name}</h3>
           <div className="markazi price-tag">
             <p className="price-tag-main">${price.split(".")[0]}</p>
