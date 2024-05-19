@@ -31,11 +31,6 @@
   font-style: normal;
 }
 
-.text-danger {
-  color: #dc3545;
-  font-weight: 500;
-}
-
 .flex-col, footer .hours,
 footer .newsletter, footer, main #testimonials .magazines, main #about .about-description, main #specials .card-details, main #specials .special-card, header, .offcanvas .offcanvas-nav {
   display: flex;
@@ -354,6 +349,7 @@ main #specials .card-details {
 }
 main #specials .card-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 main #specials h3 {
@@ -381,6 +377,9 @@ main #specials .description {
 main #about .about-section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+main #about .about-section:nth-child(even) .img-container {
+  order: 1;
 }
 main #about .img-container {
   max-width: 100%;
@@ -624,16 +623,39 @@ footer .footer-nav {
     display: flex;
     justify-content: space-between;
   }
-  main #specials h3 {
-    color: #495e57;
-    font-size: 3.2rem;
+  main #specials h3, main #specials .price-tag-main {
+    font-size: 2.4rem;
   }
   main #specials p {
+    font-size: 1.4rem;
+  }
+  main #specials .price-tag-decimal {
     font-size: 1.6rem;
-    line-height: 1.5;
+  }
+  main #about .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  main #about .about-section:nth-child(even) .img-container {
+    order: -1;
+  }
+  main #about .about-description {
+    padding: 32px;
+  }
+  main #about h3 {
+    font-size: 2.4rem;
+  }
+  main #about p {
+    font-size: 1.4rem;
+  }
+  main #about span {
+    font-size: 1.8rem;
   }
   main #testimonials {
     padding: 64px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
   }
   main #testimonials img {
     height: 40px;
@@ -644,5 +666,30 @@ footer .footer-nav {
   }
   footer {
     padding: 24px 16px;
+    gap: 32px;
+  }
+  footer p, footer button {
+    font-size: 1.4rem;
+  }
+  footer form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+  footer form input {
+    width: 90%;
+  }
+  footer form button {
+    margin: 0;
+  }
+  footer .footer-nav {
+    flex-wrap: wrap;
+  }
+  footer .upper, footer .lower {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 8px;
   }
 }/*# sourceMappingURL=App.css.map */

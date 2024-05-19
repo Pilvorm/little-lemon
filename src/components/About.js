@@ -43,6 +43,13 @@ function About() {
       </div>
 
       <div className="about-section">
+        <div className="img-container image-2">
+          <img
+            alt="Little Lemon Founder"
+            src={founder}
+            style={{ objectPosition: "55% 50%" }}
+          />
+        </div>
         <div className="about-description">
           <h3 className="special-elite">How It Came to Be</h3>
           <p>
@@ -74,13 +81,6 @@ function About() {
             Little Lemon continues to delight diners with its tantalizing
             dishes, warm hospitality, and commitment to excellence.
           </p>
-        </div>
-        <div className="img-container image-2">
-          <img
-            alt="Little Lemon Founder"
-            src={founder}
-            style={{ objectPosition: "55% 50%" }}
-          />
         </div>
       </div>
 
