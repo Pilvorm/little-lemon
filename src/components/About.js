@@ -14,7 +14,7 @@ function About() {
           />
         </div>
         <div className="about-description">
-          <h3 className="special-elite">Little Lemon</h3>
+          <h2 className="special-elite">Little Lemon</h2>
           <p>
             Nestled in the bustling heart of <span>Chicago</span>, Little Lemon
             has been a beacon of culinary experience, blending the rich tapestry
@@ -51,7 +51,7 @@ function About() {
           />
         </div>
         <div className="about-description">
-          <h3 className="special-elite">How It Came to Be</h3>
+          <h2 className="special-elite">How It Came to Be</h2>
           <p>
             Drawn together by their mutual love for Mediterranean cuisine and
             dedication to sustainable sourcing,{" "}
@@ -93,7 +93,7 @@ function About() {
           />
         </div>
         <div className="about-description">
-          <h3 className="special-elite">Reservation</h3>
+          <h2 className="special-elite">Reservation</h2>
           <p>
             Little Lemon is ideal for making special occasions, or for making
             any occasion special.

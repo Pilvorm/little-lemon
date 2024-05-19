@@ -208,7 +208,10 @@ nav {
 
 header {
   @extend .flex-col;
+  justify-content: center;
   gap: 32px;
+  height: 750px;
+  padding: 0px $x-space;
   color: white;
   letter-spacing: 1px;
   background-attachment: fixed;
@@ -216,7 +219,6 @@ header {
     url("./assets/restauranfood-comp.jpg");
   background-size: cover;
   background-position: 0% 60%;
-  padding: 172px $x-space;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
@@ -371,7 +373,7 @@ main {
   }
 
   #specials {
-    padding: 86px $x-space 100px $x-space;
+    padding: 86px $x-space;
     background-image: linear-gradient(
         180deg,
         rgba(255, 255, 255, 1),
@@ -396,7 +398,7 @@ main {
 
     img {
       width: 100%;
-      height: 425px;
+      height: 25vw;
       object-fit: cover;
       border-radius: 4px 4px 0 0;
     }
@@ -513,7 +515,7 @@ main {
       padding: 64px;
     }
 
-    h3 {
+    h2 {
       color: $primary-green;
       font-size: 3.6rem;
     }
@@ -619,7 +621,7 @@ footer {
   .hours,
   .newsletter {
     @extend .flex-col;
-    gap: 8px;
+    gap: 12px;
   }
 
   .hours {
@@ -693,7 +695,7 @@ footer {
   }
 
   header {
-    padding: 132px $x-space-tablet;
+    padding: 0px $x-space-tablet;
   }
 
   main {
@@ -701,14 +703,12 @@ footer {
       padding: 86px $x-space-tablet 100px $x-space-tablet;
 
       .specials-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
       }
 
-      img {
-        height: 375px;
-        object-fit: cover;
-        border-radius: 4px 4px 0 0;
+      .special-card {
+        flex: 1 1 0px;
       }
     }
 
@@ -731,13 +731,66 @@ footer {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    #specials {
+      .specials-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      img {
+        height: 35vw;
+      }
+
+      h3,
+      .price-tag-main {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      .price-tag-decimal {
+        font-size: 2rem;
+      }
+    }
+
+    #about {
+      h2 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1.8rem;
+      }
+    }
+
+    #testimonials {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 576px) {
   nav {
     padding: 24px $x-space-phone;
   }
 
   header {
-    padding: 132px $x-space-phone;
+    // height: 750px;
+    padding: 0px $x-space-phone;
     align-items: center;
     background-image: linear-gradient(
         90deg,
@@ -766,10 +819,6 @@ footer {
   }
 
   main {
-    h2 {
-      font-size: 2.8rem;
-    }
-
     #specials {
       padding: 86px $x-space-phone 100px $x-space-phone;
       background-image: linear-gradient(
@@ -794,25 +843,9 @@ footer {
         height: 275px;
       }
 
-      .special-card {
-        width: 100%;
-      }
-
       .card-details {
         display: flex;
         justify-content: space-between;
-      }
-
-      h3, .price-tag-main {
-        font-size: 2.4rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-  
-      .price-tag-decimal {
-        font-size: 1.6rem;
       }
     }
 
@@ -830,18 +863,6 @@ footer {
       .about-description {
         padding: 32px;
       }
-
-      h3 {
-        font-size: 2.4rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-
-      span {
-        font-size: 1.8rem;
-      }
     }
 
     #testimonials {
@@ -855,7 +876,6 @@ footer {
       }
 
       p {
-        font-size: 1.4rem;
         width: 100%;
       }
     }
@@ -865,7 +885,8 @@ footer {
     padding: 24px $x-space-phone;
     gap: 32px;
 
-    p, button {
+    p,
+    button {
       font-size: 1.4rem;
     }
 
@@ -873,7 +894,7 @@ footer {
       display: flex;
       align-items: center;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
 
       input {
         width: 90%;
@@ -886,14 +907,14 @@ footer {
 
     .footer-nav {
       flex-wrap: wrap;
-      
     }
 
-    .upper, .lower {
+    .upper,
+    .lower {
       display: flex !important;
       flex-direction: column !important;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
     }
   }
 }

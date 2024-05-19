@@ -179,14 +179,16 @@ nav a {
 }
 
 header {
+  justify-content: center;
   gap: 32px;
+  height: 750px;
+  padding: 0px 124px;
   color: white;
   letter-spacing: 1px;
   background-attachment: fixed;
   background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent), url("./assets/restauranfood-comp.jpg");
   background-size: cover;
   background-position: 0% 60%;
-  padding: 172px 124px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 header .title h1 {
@@ -316,7 +318,7 @@ main .button-fill:hover {
   transition: all 0.075s ease-in;
 }
 main #specials {
-  padding: 86px 124px 100px 124px;
+  padding: 86px 124px;
   background-image: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -333,7 +335,7 @@ main #specials .specials-list {
 }
 main #specials img {
   width: 100%;
-  height: 425px;
+  height: 25vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px 4px 0 0;
@@ -414,7 +416,7 @@ main #about .about-description {
   gap: 32px;
   padding: 64px;
 }
-main #about h3 {
+main #about h2 {
   color: #495e57;
   font-size: 3.6rem;
 }
@@ -489,7 +491,7 @@ footer .info h4 {
 }
 footer .hours,
 footer .newsletter {
-  gap: 8px;
+  gap: 12px;
 }
 footer .hours p {
   line-height: 1.5;
@@ -547,20 +549,17 @@ footer .footer-nav {
     width: 135px;
   }
   header {
-    padding: 132px 64px;
+    padding: 0px 64px;
   }
   main #specials {
     padding: 86px 64px 100px 64px;
   }
   main #specials .specials-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
   }
-  main #specials img {
-    height: 375px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 4px 4px 0 0;
+  main #specials .special-card {
+    flex: 1 1 0px;
   }
   main #testimonials {
     padding: 64px 64px;
@@ -576,12 +575,46 @@ footer .footer-nav {
     padding: 24px 64px;
   }
 }
+@media only screen and (max-width: 768px) {
+  main h2 {
+    font-size: 2.8rem;
+  }
+  main #specials .specials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  main #specials img {
+    height: 35vw;
+  }
+  main #specials h3,
+  main #specials .price-tag-main {
+    font-size: 2.8rem;
+  }
+  main #specials p {
+    font-size: 1.4rem;
+  }
+  main #specials .price-tag-decimal {
+    font-size: 2rem;
+  }
+  main #about h2 {
+    font-size: 2.8rem;
+  }
+  main #about p {
+    font-size: 1.4rem;
+  }
+  main #about span {
+    font-size: 1.8rem;
+  }
+  main #testimonials p {
+    font-size: 1.4rem;
+  }
+}
 @media only screen and (max-width: 576px) {
   nav {
     padding: 24px 16px;
   }
   header {
-    padding: 132px 16px;
+    padding: 0px 16px;
     align-items: center;
     background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("./assets/restauranfood-comp.jpg");
     background-position: 50% 60%;
@@ -598,9 +631,6 @@ footer .footer-nav {
     width: 75%;
     text-align: center;
   }
-  main h2 {
-    font-size: 2.8rem;
-  }
   main #specials {
     padding: 86px 16px 100px 16px;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
@@ -616,21 +646,9 @@ footer .footer-nav {
   main #specials img {
     height: 275px;
   }
-  main #specials .special-card {
-    width: 100%;
-  }
   main #specials .card-details {
     display: flex;
     justify-content: space-between;
-  }
-  main #specials h3, main #specials .price-tag-main {
-    font-size: 2.4rem;
-  }
-  main #specials p {
-    font-size: 1.4rem;
-  }
-  main #specials .price-tag-decimal {
-    font-size: 1.6rem;
   }
   main #about .about-section {
     display: flex;
@@ -642,15 +660,6 @@ footer .footer-nav {
   main #about .about-description {
     padding: 32px;
   }
-  main #about h3 {
-    font-size: 2.4rem;
-  }
-  main #about p {
-    font-size: 1.4rem;
-  }
-  main #about span {
-    font-size: 1.8rem;
-  }
   main #testimonials {
     padding: 64px 16px;
     display: flex;
@@ -661,21 +670,21 @@ footer .footer-nav {
     height: 40px;
   }
   main #testimonials p {
-    font-size: 1.4rem;
     width: 100%;
   }
   footer {
     padding: 24px 16px;
     gap: 32px;
   }
-  footer p, footer button {
+  footer p,
+  footer button {
     font-size: 1.4rem;
   }
   footer form {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
   }
   footer form input {
     width: 90%;
@@ -686,10 +695,11 @@ footer .footer-nav {
   footer .footer-nav {
     flex-wrap: wrap;
   }
-  footer .upper, footer .lower {
+  footer .upper,
+  footer .lower {
     display: flex !important;
     flex-direction: column !important;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
   }
 }/*# sourceMappingURL=App.css.map */
