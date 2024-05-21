@@ -1,0 +1,61 @@
+$primary-green: #495e57;
+$primary-yellow: #f4ce14;
+$secondary-cream: #ee9972;
+$secondary-cream-light: #fbdabb;
+$highlight-gray: #edefee;
+$highlight-black: #333333;
+$x-space: 124px;
+$x-space-tablet: 64px;
+$x-space-phone: 16px;
+$text-transition: all 0.075s ease-in;
+
+.markazi {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-elite {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-yellow {
+  cursor: pointer;
+  color: white;
+  transition: $text-transition;
+
+  &:hover {
+    color: $primary-yellow !important;
+    transition: $text-transition;
+  }
+}
+
+.transparent-btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 2px solid $primary-yellow;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $primary-yellow;
+    color: $highlight-black;
+  }
+}

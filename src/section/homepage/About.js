@@ -1,6 +1,6 @@
-import restaurant from "../assets/restaurant-3.jpg";
-import founder from "../assets/carmy-sydney-4.jpg";
-import table from "../assets/restaurant-4.jpg";
+import restaurant from "../../assets/restaurant-3.jpg";
+import founder from "../../assets/carmy-sydney-4.jpg";
+import table from "../../assets/restaurant-4.jpg";
 
 function About() {
   return (

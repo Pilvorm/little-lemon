@@ -1,6 +1,6 @@
-import salad from "../assets/greek-salad-2.jpg";
-import bruschetta from "../assets/bruschetta.jpg";
-import dessert from "../assets/lemon-dessert.jpg";
+import salad from "../../assets/greek-salad-2.jpg";
+import bruschetta from "../../assets/bruschetta.jpg";
+import dessert from "../../assets/lemon-dessert.jpg";
 
 
 const specials = [

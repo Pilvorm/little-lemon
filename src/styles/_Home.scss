@@ -1,0 +1,545 @@
+@import "../variables";
+
+#homepage-header {
+  background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent),
+    url("./assets/restaurantfood-comp.jpg");
+  background-position: 0% 60%;
+
+  .title {
+    h1 {
+      font-size: 7.2rem;
+      font-weight: 400;
+      color: $primary-yellow;
+      line-height: 1;
+    }
+
+    a {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: inherit;
+      position: relative;
+      transition: 0.125s all ease-in-out;
+
+      p {
+        font-size: 5.4rem;
+        margin-bottom: 0;
+        width: fit-content;
+      }
+
+      svg {
+        display: inline-block;
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+        transform: translateY(-5px);
+      }
+
+      &:hover > svg {
+        opacity: 1;
+        transition: 0.125s all ease-in-out;
+        transform: none;
+      }
+    }
+
+    a:hover {
+      color: white;
+      transition: 0.125s all ease-in-out;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.5px;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 300;
+    width: 35%;
+    line-height: 1.5;
+  }
+
+  .reserve-btn {
+    @extend .transparent-btn;
+    cursor: pointer;
+    font-size: 1.6rem;
+    max-width: fit-content;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 12px 32px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end stretch;
+    z-index: 1;
+    transition: all 0.5s ease;
+    &:before,
+    &:after {
+      content: "";
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      z-index: -1;
+      top: 150%;
+      transition: all 0.7s ease;
+    }
+    &:before {
+      border-radius: 60% 70% 20% 40%;
+      background: $primary-yellow;
+      opacity: 0.2;
+      animation: water 6s ease-in-out infinite both alternate;
+    }
+    &:after {
+      border-radius: 60% 70% 20% 40%;
+      background: $primary-yellow;
+      opacity: 0.5;
+      animation: water 7s ease-in-out infinite both alternate;
+    }
+    &:hover {
+      &:before,
+      &:after {
+        opacity: 1;
+        top: -100%;
+      }
+    }
+  }
+
+  .socials {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+
+    a {
+      @extend .to-yellow;
+    }
+  }
+}
+
+main {
+  h2 {
+    font-size: 3.6rem;
+    color: $primary-green;
+  }
+
+  .button-fill {
+    color: $highlight-black;
+    width: fit-content;
+    font-size: 1.6rem;
+    padding: 12px 32px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 1px solid $primary-yellow;
+    background-color: $primary-yellow;
+    transition: $text-transition;
+
+    &:hover {
+      background-color: transparent;
+      transition: $text-transition;
+    }
+  }
+
+  #specials {
+    padding: 86px $x-space;
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.6),
+        rgba(242, 242, 242, 0.5)
+      ),
+      url("./assets/lemon-bg.jpg");
+    background-size: cover;
+
+    .special-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .specials-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 43px;
+    }
+
+    img {
+      width: 100%;
+      height: 25vw;
+      object-fit: cover;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .special-card {
+      @extend .flex-col;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    }
+
+    .card-details {
+      @extend .flex-col;
+      margin: 20px 20px;
+      gap: 16px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h3 {
+      color: $primary-green;
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .price-tag {
+      color: $secondary-cream;
+      display: flex;
+      gap: 2px;
+    }
+
+    .price-tag-main {
+      font-size: 3.2rem;
+    }
+
+    .price-tag-decimal {
+      font-size: 2rem;
+    }
+
+    .description {
+      color: $highlight-black;
+    }
+  }
+
+  #about {
+    .about-section {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-section:nth-child(even) .img-container {
+      order: 1;
+    }
+
+    .img-container {
+      max-width: 100%;
+      height: 100%;
+      padding: 0px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .image-1 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(73, 94, 87, 0.5),
+          rgba(73, 94, 87, 0.5)
+        ),
+        url("./assets/plant-bg.jpg");
+    }
+
+    .image-2 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(73, 94, 87, 0.3),
+          rgba(73, 94, 87, 0.5)
+        ),
+        url("./assets/plant-bg-3.jpg");
+      background-position: 0 0;
+    }
+
+    .image-3 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(73, 94, 87, 0.5),
+          rgba(73, 94, 87, 0.5)
+        ),
+        url("./assets/plant-bg-4.jpg");
+      background-position: 0 100%;
+    }
+
+    img {
+      width: 90%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .about-description {
+      @extend .flex-col;
+      justify-content: center;
+      gap: 32px;
+      padding: 64px;
+    }
+
+    h2 {
+      color: $primary-green;
+      font-size: 3.6rem;
+    }
+
+    p {
+      color: $highlight-black;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    span {
+      color: $primary-green;
+      font-weight: 500;
+      font-size: 2rem;
+      @extend .special-elite;
+    }
+  }
+
+  #testimonials {
+    padding: 64px $x-space;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url("./assets/lemon-bg.jpg");
+    background-size: cover;
+
+    .magazines {
+      @extend .flex-col;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      color: $primary-green;
+    }
+
+    img {
+      width: fit-content;
+      height: 40px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.6rem;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes water {
+  0% {
+    transform: rotate(0);
+  }
+
+  20% {
+    border-radius: 50% 63% 80% 49%;
+  }
+  40% {
+    border-radius: 60% 64% 64% 48%;
+  }
+  60% {
+    border-radius: 80% 63% 51% 49%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58%;
+  }
+  100% {
+    border-radius: 62% 67% 70% 53%;
+    transform: rotate(180deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    #specials {
+      padding: 86px $x-space-tablet 100px $x-space-tablet;
+
+      .specials-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .special-card {
+        flex: 1 1 0px;
+      }
+    }
+
+    #testimonials {
+      padding: 64px $x-space-tablet;
+
+      img {
+        height: 40px;
+      }
+
+      p {
+        font-size: 1.4rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    #specials {
+      .specials-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      img {
+        height: 35vw;
+      }
+
+      h3,
+      .price-tag-main {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      .price-tag-decimal {
+        font-size: 2rem;
+      }
+    }
+
+    #about {
+      h2 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1.8rem;
+      }
+    }
+
+    #testimonials {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #homepage-header {
+    background-position: 50% 60%;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        svg {
+          display: none;
+        }
+      }
+    }
+
+    p {
+      width: 75%;
+      text-align: center;
+    }
+  }
+
+  main {
+    #specials {
+      padding: 86px $x-space-phone 100px $x-space-phone;
+      background-image: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.6),
+          rgba(242, 242, 242, 0.5)
+        ),
+        url("./assets/lemon-bg.jpg");
+
+      .special-header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .specials-list {
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        height: 275px;
+      }
+
+      .card-details {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    #about {
+      .about-section {
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .about-section:nth-child(even) .img-container {
+        order: -1;
+      }
+
+      .about-description {
+        padding: 32px;
+      }
+    }
+
+    #testimonials {
+      padding: 64px $x-space-phone;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+
+      img {
+        height: 40px;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import { TfiLocationPin } from "react-icons/tfi";
 
 function Header({ refer }) {
   return (
-    <header ref={refer}>
+    <header id="homepage-header" ref={refer}>
       <div className="title">
         <h1 className="markazi">Little Lemon</h1>
         <a

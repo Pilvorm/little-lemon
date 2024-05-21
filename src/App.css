@@ -1,16 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Special+Elite&display=swap");
-::-webkit-scrollbar {
-  width: 14px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #495e57;
-  border: 4px solid rgba(0, 0, 0, 0);
-  background-clip: padding-box;
-  border-radius: 0;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
-}
-
 .markazi {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
@@ -32,26 +20,26 @@
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, main #testimonials .magazines, main #about .about-description, main #specials .card-details, main #specials .special-card, header, .offcanvas .offcanvas-nav {
+footer .newsletter, footer, header, .offcanvas .offcanvas-nav, main #testimonials .magazines, main #about .about-description, main #specials .card-details, main #specials .special-card {
   display: flex;
   flex-direction: column;
 }
 
 .to-yellow, footer a,
-footer .lower button, header .socials a, nav button,
-nav a {
+footer .lower button, nav button,
+nav a, #homepage-header .socials a {
   cursor: pointer;
   color: white;
   transition: all 0.075s ease-in;
 }
 .to-yellow:hover, footer a:hover,
-footer .lower button:hover, header .socials a:hover, nav button:hover,
-nav a:hover {
+footer .lower button:hover, nav button:hover,
+nav a:hover, #homepage-header .socials a:hover {
   color: #f4ce14 !important;
   transition: all 0.075s ease-in;
 }
 
-.transparent-btn, footer form button, header .reserve-btn {
+.transparent-btn, footer form button, #homepage-header .reserve-btn {
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -60,144 +48,22 @@ nav a:hover {
   text-transform: uppercase;
   font-weight: 500;
 }
-.transparent-btn:hover, footer form button:hover, header .reserve-btn:hover {
+.transparent-btn:hover, footer form button:hover, #homepage-header .reserve-btn:hover {
   background-color: #f4ce14;
   color: #333333;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none !important;
-}
-a:visited {
-  color: white !important;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
-nav {
-  color: white;
-  padding: 24px 124px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 54px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  transition: all 0.3s linear;
-}
-nav .nav-links {
-  display: flex;
-  gap: 36px;
-  align-items: center;
-  margin: 0;
-}
-nav button,
-nav a {
-  font-size: 1.6rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.logo {
-  width: 165px;
-}
-
-.burger {
-  cursor: pointer;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-}
-
-.offcanvas {
-  background-color: rgb(255, 255, 255);
-}
-.offcanvas * {
-  color: #333333;
-}
-.offcanvas .offcanvas-header {
-  padding: 24px 16px;
-  justify-content: space-between;
-}
-.offcanvas .offcanvas-body {
-  padding: 32px 16px;
-}
-.offcanvas .offcanvas-nav {
-  gap: 36px;
-}
-.offcanvas .offcanvas-nav button {
-  width: 100%;
-  text-align: right;
-  font-size: 2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.offcanvas .offcanvas-socials {
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-}
-
-.nav-background {
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-}
-.nav-background button,
-.nav-background a {
-  color: #333333 !important;
-}
-.nav-background button:hover,
-.nav-background a:hover {
-  color: #495e57 !important;
-  transition: all 0.075s ease-in;
-}
-
-.hidden {
-  top: -120px;
-  transition: all 0.15s linear;
-}
-
-header {
-  justify-content: center;
-  gap: 32px;
-  height: 750px;
-  padding: 0px 124px;
-  color: white;
-  letter-spacing: 1px;
-  background-attachment: fixed;
-  background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent), url("./assets/restauranfood-comp.jpg");
-  background-size: cover;
+#homepage-header {
+  background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent), url("./assets/restaurantfood-comp.jpg");
   background-position: 0% 60%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-header .title h1 {
+#homepage-header .title h1 {
   font-size: 7.2rem;
   font-weight: 400;
   color: #f4ce14;
   line-height: 1;
 }
-header .title a {
+#homepage-header .title a {
   display: inline-flex;
   gap: 8px;
   align-items: center;
@@ -205,28 +71,28 @@ header .title a {
   position: relative;
   transition: 0.125s all ease-in-out;
 }
-header .title a p {
+#homepage-header .title a p {
   font-size: 5.4rem;
   margin-bottom: 0;
   width: -moz-fit-content;
   width: fit-content;
 }
-header .title a svg {
+#homepage-header .title a svg {
   display: inline-block;
   opacity: 0;
   transition: 0.3s all ease-in-out;
   transform: translateY(-5px);
 }
-header .title a:hover > svg {
+#homepage-header .title a:hover > svg {
   opacity: 1;
   transition: 0.125s all ease-in-out;
   transform: none;
 }
-header .title a:hover {
+#homepage-header .title a:hover {
   color: white;
   transition: 0.125s all ease-in-out;
 }
-header .title a::before {
+#homepage-header .title a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -238,17 +104,17 @@ header .title a::before {
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
-header .title a:hover::before {
+#homepage-header .title a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
-header p {
+#homepage-header p {
   font-size: 2rem;
   font-weight: 300;
   width: 35%;
   line-height: 1.5;
 }
-header .reserve-btn {
+#homepage-header .reserve-btn {
   cursor: pointer;
   font-size: 1.6rem;
   max-width: -moz-fit-content;
@@ -264,7 +130,7 @@ header .reserve-btn {
   z-index: 1;
   transition: all 0.5s ease;
 }
-header .reserve-btn:before, header .reserve-btn:after {
+#homepage-header .reserve-btn:before, #homepage-header .reserve-btn:after {
   content: "";
   height: 500px;
   width: 500px;
@@ -273,23 +139,23 @@ header .reserve-btn:before, header .reserve-btn:after {
   top: 150%;
   transition: all 0.7s ease;
 }
-header .reserve-btn:before {
+#homepage-header .reserve-btn:before {
   border-radius: 60% 70% 20% 40%;
   background: #f4ce14;
   opacity: 0.2;
   animation: water 6s ease-in-out infinite both alternate;
 }
-header .reserve-btn:after {
+#homepage-header .reserve-btn:after {
   border-radius: 60% 70% 20% 40%;
   background: #f4ce14;
   opacity: 0.5;
   animation: water 7s ease-in-out infinite both alternate;
 }
-header .reserve-btn:hover:before, header .reserve-btn:hover:after {
+#homepage-header .reserve-btn:hover:before, #homepage-header .reserve-btn:hover:after {
   opacity: 1;
   top: -100%;
 }
-header .socials {
+#homepage-header .socials {
   margin: 0;
   padding: 0;
   display: flex;
@@ -457,6 +323,390 @@ main #testimonials p {
   width: 100%;
 }
 
+@keyframes water {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    border-radius: 50% 63% 80% 49%;
+  }
+  40% {
+    border-radius: 60% 64% 64% 48%;
+  }
+  60% {
+    border-radius: 80% 63% 51% 49%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58%;
+  }
+  100% {
+    border-radius: 62% 67% 70% 53%;
+    transform: rotate(180deg);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main #specials {
+    padding: 86px 64px 100px 64px;
+  }
+  main #specials .specials-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main #specials .special-card {
+    flex: 1 1 0px;
+  }
+  main #testimonials {
+    padding: 64px 64px;
+  }
+  main #testimonials img {
+    height: 40px;
+  }
+  main #testimonials p {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main h2 {
+    font-size: 2.8rem;
+  }
+  main #specials .specials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  main #specials img {
+    height: 35vw;
+  }
+  main #specials h3,
+  main #specials .price-tag-main {
+    font-size: 2.8rem;
+  }
+  main #specials p {
+    font-size: 1.4rem;
+  }
+  main #specials .price-tag-decimal {
+    font-size: 2rem;
+  }
+  main #about h2 {
+    font-size: 2.8rem;
+  }
+  main #about p {
+    font-size: 1.4rem;
+  }
+  main #about span {
+    font-size: 1.8rem;
+  }
+  main #testimonials p {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #homepage-header {
+    background-position: 50% 60%;
+  }
+  #homepage-header .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #homepage-header .title a svg {
+    display: none;
+  }
+  #homepage-header p {
+    width: 75%;
+    text-align: center;
+  }
+  main #specials {
+    padding: 86px 16px 100px 16px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  }
+  main #specials .special-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  main #specials .specials-list {
+    display: flex;
+    flex-direction: column;
+  }
+  main #specials img {
+    height: 275px;
+  }
+  main #specials .card-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  main #about .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  main #about .about-section:nth-child(even) .img-container {
+    order: -1;
+  }
+  main #about .about-description {
+    padding: 32px;
+  }
+  main #testimonials {
+    padding: 64px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  main #testimonials img {
+    height: 40px;
+  }
+  main #testimonials p {
+    width: 100%;
+  }
+}
+.markazi {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-elite, main #about span {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flex-col, footer .hours,
+footer .newsletter, footer, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, main #testimonials .magazines {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-yellow, footer a,
+footer .lower button, nav button,
+nav a, #homepage-header .socials a {
+  cursor: pointer;
+  color: white;
+  transition: all 0.075s ease-in;
+}
+.to-yellow:hover, footer a:hover,
+footer .lower button:hover, nav button:hover,
+nav a:hover, #homepage-header .socials a:hover {
+  color: #f4ce14 !important;
+  transition: all 0.075s ease-in;
+}
+
+.transparent-btn, footer form button, #homepage-header .reserve-btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f4ce14;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.transparent-btn:hover, footer form button:hover, #homepage-header .reserve-btn:hover {
+  background-color: #f4ce14;
+  color: #333333;
+}
+
+#reservation-header {
+  background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.7), transparent), url("./assets/restaurant-4.jpg");
+}
+
+.markazi {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-elite, main #about span {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flex-col, footer .hours,
+footer .newsletter, footer, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, main #testimonials .magazines {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-yellow, footer a,
+footer .lower button, nav button,
+nav a, #homepage-header .socials a {
+  cursor: pointer;
+  color: white;
+  transition: all 0.075s ease-in;
+}
+.to-yellow:hover, footer a:hover,
+footer .lower button:hover, nav button:hover,
+nav a:hover, #homepage-header .socials a:hover {
+  color: #f4ce14 !important;
+  transition: all 0.075s ease-in;
+}
+
+.transparent-btn, footer form button, #homepage-header .reserve-btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f4ce14;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.transparent-btn:hover, footer form button:hover, #homepage-header .reserve-btn:hover {
+  background-color: #f4ce14;
+  color: #333333;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #495e57;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 0;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+a:visited {
+  color: white !important;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+nav {
+  color: white;
+  padding: 24px 124px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.3s linear;
+}
+nav .nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  margin: 0;
+}
+nav button,
+nav a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo {
+  width: 165px;
+}
+
+.burger {
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.offcanvas {
+  background-color: rgb(255, 255, 255);
+}
+.offcanvas * {
+  color: #333333;
+}
+.offcanvas .offcanvas-header {
+  padding: 24px 16px;
+  justify-content: space-between;
+}
+.offcanvas .offcanvas-body {
+  padding: 32px 16px;
+}
+.offcanvas .offcanvas-nav {
+  gap: 36px;
+}
+.offcanvas .offcanvas-nav button {
+  width: 100%;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.offcanvas .offcanvas-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.nav-background {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.nav-background button,
+.nav-background a {
+  color: #333333 !important;
+}
+.nav-background button:hover,
+.nav-background a:hover {
+  color: #495e57 !important;
+  transition: all 0.075s ease-in;
+}
+
+.hidden {
+  top: -120px;
+  transition: all 0.15s linear;
+}
+
+header {
+  justify-content: center;
+  gap: 32px;
+  height: 750px;
+  padding: 0px 124px;
+  color: white;
+  letter-spacing: 1px;
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
 footer {
   gap: 54px;
   padding: 24px 124px;
@@ -517,27 +767,6 @@ footer .footer-nav {
   gap: 32px;
 }
 
-@keyframes water {
-  0% {
-    transform: rotate(0);
-  }
-  20% {
-    border-radius: 50% 63% 80% 49%;
-  }
-  40% {
-    border-radius: 60% 64% 64% 48%;
-  }
-  60% {
-    border-radius: 80% 63% 51% 49%;
-  }
-  80% {
-    border-radius: 40% 60% 42% 58%;
-  }
-  100% {
-    border-radius: 62% 67% 70% 53%;
-    transform: rotate(180deg);
-  }
-}
 @media only screen and (max-width: 1024px) {
   nav {
     padding: 24px 64px;
@@ -551,62 +780,8 @@ footer .footer-nav {
   header {
     padding: 0px 64px;
   }
-  main #specials {
-    padding: 86px 64px 100px 64px;
-  }
-  main #specials .specials-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  main #specials .special-card {
-    flex: 1 1 0px;
-  }
-  main #testimonials {
-    padding: 64px 64px;
-  }
-  main #testimonials img {
-    height: 40px;
-  }
-  main #testimonials p {
-    font-size: 1.4rem;
-    width: 100%;
-  }
   footer {
     padding: 24px 64px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  main h2 {
-    font-size: 2.8rem;
-  }
-  main #specials .specials-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-  main #specials img {
-    height: 35vw;
-  }
-  main #specials h3,
-  main #specials .price-tag-main {
-    font-size: 2.8rem;
-  }
-  main #specials p {
-    font-size: 1.4rem;
-  }
-  main #specials .price-tag-decimal {
-    font-size: 2rem;
-  }
-  main #about h2 {
-    font-size: 2.8rem;
-  }
-  main #about p {
-    font-size: 1.4rem;
-  }
-  main #about span {
-    font-size: 1.8rem;
-  }
-  main #testimonials p {
-    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -616,61 +791,6 @@ footer .footer-nav {
   header {
     padding: 0px 16px;
     align-items: center;
-    background-image: linear-gradient(90deg, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("./assets/restauranfood-comp.jpg");
-    background-position: 50% 60%;
-  }
-  header .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header .title a svg {
-    display: none;
-  }
-  header p {
-    width: 75%;
-    text-align: center;
-  }
-  main #specials {
-    padding: 86px 16px 100px 16px;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
-  }
-  main #specials .special-header {
-    flex-direction: column;
-    gap: 16px;
-  }
-  main #specials .specials-list {
-    display: flex;
-    flex-direction: column;
-  }
-  main #specials img {
-    height: 275px;
-  }
-  main #specials .card-details {
-    display: flex;
-    justify-content: space-between;
-  }
-  main #about .about-section {
-    display: flex;
-    flex-direction: column;
-  }
-  main #about .about-section:nth-child(even) .img-container {
-    order: -1;
-  }
-  main #about .about-description {
-    padding: 32px;
-  }
-  main #testimonials {
-    padding: 64px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
-  }
-  main #testimonials img {
-    height: 40px;
-  }
-  main #testimonials p {
-    width: 100%;
   }
   footer {
     padding: 24px 16px;
