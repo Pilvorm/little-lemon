@@ -10,7 +10,7 @@
       font-size: 7.2rem;
       font-weight: 400;
       color: $primary-yellow;
-      line-height: 1;
+      line-height: 1.5;
     }
 
     a {
@@ -25,6 +25,7 @@
         font-size: 5.4rem;
         margin-bottom: 0;
         width: fit-content;
+        line-height: 1;
       }
 
       svg {
@@ -65,7 +66,7 @@
     }
   }
 
-  p {
+  .header-description {
     font-size: 2rem;
     font-weight: 300;
     width: 35%;
@@ -136,35 +137,14 @@ main {
     color: $primary-green;
   }
 
-  .button-fill {
-    color: $highlight-black;
+  button {
+    @extend .default-btn;
     width: fit-content;
-    font-size: 1.6rem;
-    padding: 12px 32px;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    text-transform: uppercase;
-    font-weight: 400;
-    border: 1px solid $primary-yellow;
-    background-color: $primary-yellow;
-    transition: $text-transition;
-
-    &:hover {
-      background-color: transparent;
-      transition: $text-transition;
-    }
   }
 
   #specials {
     padding: 86px $x-space;
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.6),
-        rgba(242, 242, 242, 0.5)
-      ),
-      url("./assets/lemon-bg.jpg");
-    background-size: cover;
+    @extend .lemon-bg;
 
     .special-header {
       display: flex;
@@ -176,7 +156,7 @@ main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      margin-top: 43px;
+      margin-top: 42px;
     }
 
     img {
@@ -317,40 +297,6 @@ main {
       @extend .special-elite;
     }
   }
-
-  #testimonials {
-    padding: 64px $x-space;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 64px;
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 0.6)
-      ),
-      url("./assets/lemon-bg.jpg");
-    background-size: cover;
-
-    .magazines {
-      @extend .flex-col;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      color: $primary-green;
-    }
-
-    img {
-      width: fit-content;
-      height: 40px;
-    }
-
-    p {
-      text-align: center;
-      font-size: 1.6rem;
-      width: 100%;
-    }
-  }
 }
 
 @keyframes water {
@@ -388,19 +334,6 @@ main {
 
       .special-card {
         flex: 1 1 0px;
-      }
-    }
-
-    #testimonials {
-      padding: 64px $x-space-tablet;
-
-      img {
-        height: 40px;
-      }
-
-      p {
-        font-size: 1.4rem;
-        width: 100%;
       }
     }
   }
@@ -447,12 +380,6 @@ main {
 
       span {
         font-size: 1.8rem;
-      }
-    }
-
-    #testimonials {
-      p {
-        font-size: 1.4rem;
       }
     }
   }
@@ -524,21 +451,6 @@ main {
 
       .about-description {
         padding: 32px;
-      }
-    }
-
-    #testimonials {
-      padding: 64px $x-space-phone;
-      display: flex;
-      flex-direction: column;
-      gap: 64px;
-
-      img {
-        height: 40px;
-      }
-
-      p {
-        width: 100%;
       }
     }
   }

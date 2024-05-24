@@ -1,0 +1,86 @@
+@import "../variables";
+
+.flatpickr-calendar {
+  // border-radius: 4px !important;
+
+  .flatpickr-day {
+    color: $highlight-black;
+    // &.today {
+    //   border-color: $gray-100;
+    //   &:hover {
+    //     background: #e6e6e6;
+    //     color: black;
+    //   }
+    // }
+
+    &.selected,
+    &.selected:hover {
+      background: $primary-yellow;
+      color: black;
+      border-color: transparent;
+    }
+
+    //   &.inRange,
+    //   &.inRange:hover {
+    //     background: lighten($color: $primary, $amount: 30%);
+    //     border-color: lighten($color: $primary, $amount: 30%);
+    //     box-shadow: -5px 0 0 lighten($color: $primary, $amount: 30%), 5px 0 0 lighten($color: $primary, $amount: 30%);
+    //   }
+
+    //   &.startRange,
+    //   &.endRange,
+    //   &.startRange:hover,
+    //   &.endRange:hover {
+    //     background: $primary;
+    //     color: $white;
+    //     border-color: $primary;
+    //   }
+
+    //   &.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+    //   &.startRange.startRange + .endRange:not(:nth-child(7n + 1)),
+    //   &.endRange.startRange + .endRange:not(:nth-child(7n + 1)) {
+    //     box-shadow: -10px 0 0 $primary;
+    //   }
+
+    //   &.flatpickr-disabled,
+    //   &.prevMonthDay,
+    //   &.nextMonthDay {
+    //     color: $gray-300;
+    //   }
+
+    //   &:hover {
+    //     background: $gray-50;
+    //   }
+  }
+
+  // &:after,
+  // &:before {
+  //   display: none;
+  // }
+
+  .flatpickr-months {
+    .flatpickr-prev-month,
+    .flatpickr-next-month {
+      top: -5px;
+      &:hover i,
+      &:hover svg {
+        fill: $primary-green;
+      }
+    }
+  }
+//   .flatpickr-current-month span.cur-month {
+//     font-weight: 500;
+//   }
+  select.flatpickr-monthDropdown-months, .numInputWrapper {
+    border-radius: 4px;
+  }
+  .numInputWrapper {
+    margin-left: 16px;
+  }
+  .arrowUp {
+    border-radius: 0 4px 0px 0;
+  }
+  .arrowDown {
+    border-radius: 0 0px 4px 0;
+  }
+}

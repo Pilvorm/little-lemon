@@ -105,7 +105,7 @@ function About() {
             prioritize your comfort and satisfaction.
           </p>
 
-          <button className="button-fill">Reserve a Table</button>
+          <button className="fill-btn">Reserve a Table</button>
         </div>
       </div>
     </section>

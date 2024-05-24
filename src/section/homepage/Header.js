@@ -16,7 +16,7 @@ function Header({ refer }) {
           <TfiLocationPin size={36} />
         </a>
       </div>
-      <p>
+      <p className="header-description">
         A family-owned Mediterranean restaurant, focused on traditional recipes
         served with a modern twist.
       </p>

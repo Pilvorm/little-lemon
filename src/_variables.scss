@@ -9,6 +9,22 @@ $x-space-tablet: 64px;
 $x-space-phone: 16px;
 $text-transition: all 0.075s ease-in;
 
+
+$body-bg: #f8f8f8;
+$body-color: #6e6b7b;
+
+$gray-50: #f6f6f6;
+$gray-100: #babfc7; // $gray-lightest
+$gray-200: #ededed; // $gray-lighter
+$gray-300: #dae1e7; // $gray-light
+$gray-400: #636363;
+$gray-500: #adb5bd;
+$gray-600: #b8c2cc; // $gray
+$gray-700: #4e5154;
+$gray-800: #1e1e1e; // $gray-dark
+$gray-900: #2a2e30;
+$black: #22292f; // 231f48 22292f
+
 .markazi {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
@@ -53,9 +69,48 @@ $text-transition: all 0.075s ease-in;
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 500;
+  transition: $text-transition;
 
   &:hover {
     background-color: $primary-yellow;
     color: $highlight-black;
+    transition: $text-transition;
   }
+}
+
+.fill-btn {
+  @extend .transparent-btn;
+  background-color: $primary-yellow;
+  color: $highlight-black;
+  border: 1px solid $primary-yellow;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.default-btn {
+  @extend .fill-btn;
+  font-size: 1.6rem;
+  padding: 12px 32px;
+}
+
+.lemon-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(242, 242, 242, 0.5)
+    ),
+    url("./assets/lemon-bg.jpg");
+  background-size: cover;
+}
+
+.text-danger {
+  font-weight: 500;
+}
+
+svg{
+  vertical-align: -15em;
+  margin-bottom: calc(-0.125em / 2);
 }

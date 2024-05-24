@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Special+Elite&display=swap");
 
-@import "./styles/Home.scss";
-@import "./styles/Reservation.scss";
+@import "./styles/Home";
+@import "./styles/Reservation";
+@import "./styles/Form";
+@import "./styles/Flatpickr";
 @import "variables";
 
 ::-webkit-scrollbar {
@@ -162,6 +164,34 @@ header {
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+#testimonials {
+  padding: 64px $x-space;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  @extend .lemon-bg;
+
+  .magazines {
+    @extend .flex-col;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: $primary-green;
+  }
+
+  img {
+    width: fit-content;
+    height: 40px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.6rem;
+    width: 100%;
+  }
+}
+
 footer {
   @extend .flex-col;
   gap: 54px;
@@ -225,10 +255,6 @@ footer {
   form {
     input {
       width: 500px;
-      padding: 12px 16px;
-      background-color: white;
-      border-radius: 4px;
-      border: none;
     }
 
     button {
@@ -267,8 +293,29 @@ footer {
     padding: 0px $x-space-tablet;
   }
 
+  #testimonials {
+    padding: 64px $x-space-tablet;
+
+    img {
+      height: 40px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      width: 100%;
+    }
+  }
+
   footer {
     padding: 24px $x-space-tablet;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #testimonials {
+    p {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -280,6 +327,21 @@ footer {
   header {
     padding: 0px $x-space-phone;
     align-items: center;
+  }
+
+  #testimonials {
+    padding: 64px $x-space-phone;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    img {
+      height: 40px;
+    }
+
+    p {
+      width: 100%;
+    }
   }
 
   footer {

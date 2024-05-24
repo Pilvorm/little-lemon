@@ -17,20 +17,12 @@ function Footer() {
       <div className="upper">
         <p>140 West 4th Street | NY, NY 10012</p>
         <div className="footer-socials">
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaInstagram size={24} />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookF size={24} />
-            </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <FaFacebookF size={24} />
+          </a>
         </div>
         <p className="right">+1 (347) 799-1312</p>
       </div>
@@ -67,7 +59,9 @@ function Footer() {
               <Form>
                 <Field id="email" name="email" placeholder="E-Mail" />
                 <button type="submit">Subscribe</button>
-                <p className="text-danger">{errors.email}</p>
+                {errors.email && touched.email ? (
+                  <div className="text-danger">{errors.email}</div>
+                ) : null}
               </Form>
             )}
           </Formik>
