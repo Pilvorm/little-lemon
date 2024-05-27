@@ -15,6 +15,15 @@ input:focus {
   transition: $text-transition;
 }
 
+select {
+  cursor: pointer;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // -o-appearance: none;
+  // appearance: none;
+  // position:relative;
+}
+
 option {
   border-radius: 4px;
 }
