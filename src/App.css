@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Special+Elite&display=swap");
-.markazi {
+.markazi, .modal-dialog .modal-title {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -20,7 +20,7 @@
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, form, main #about .about-description, main #specials .card-details, main #specials .special-card {
+footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, form, main #about .about-description, main #specials .card-details, main #specials .special-card {
   display: flex;
   flex-direction: column;
 }
@@ -39,11 +39,11 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .location, .fill-btn, .reserve-info .hour-btn, .default-btn, main button {
+.default-shadow, .location, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.transparent-btn, footer form button, #homepage-header .reserve-btn, .fill-btn, .reserve-info .hour-btn, .default-btn, main button {
+.transparent-btn, footer form button, #homepage-header .reserve-btn, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -53,18 +53,18 @@ nav a:hover, #homepage-header .socials a:hover {
   font-weight: 500;
   transition: all 0.075s ease-in;
 }
-.transparent-btn:hover, footer form button:hover, #homepage-header .reserve-btn:hover, .fill-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, main button:hover {
+.transparent-btn:hover, footer form button:hover, #homepage-header .reserve-btn:hover, .fill-btn:hover, .modal-dialog .submit-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, main button:hover {
   background-color: #f4ce14;
   color: #333333;
   transition: all 0.075s ease-in;
 }
 
-.fill-btn, .reserve-info .hour-btn, .default-btn, main button {
+.fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   background-color: #f4ce14;
   color: #333333;
   border: 1px solid #f4ce14;
 }
-.fill-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, main button:hover {
+.fill-btn:hover, .modal-dialog .submit-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, main button:hover {
   background-color: transparent;
 }
 
@@ -73,11 +73,11 @@ nav a:hover, #homepage-header .socials a:hover {
   padding: 12px 32px;
 }
 
-.link-btn, .location .location-details .text-link {
+.link-btn, .location .text-link {
   color: #333333 !important;
   transition: all 0.075s ease-in;
 }
-.link-btn:hover, .location .location-details .text-link:hover {
+.link-btn:hover, .location .text-link:hover {
   color: #495e57 !important;
   transition: all 0.075s ease-in;
 }
@@ -122,6 +122,7 @@ svg {
   line-height: 1;
 }
 #homepage-header .title a svg {
+  margin-top: -10px;
   display: inline-block;
   opacity: 0;
   transition: 0.3s all ease-in-out;
@@ -436,7 +437,7 @@ main #about span {
     padding: 32px;
   }
 }
-.markazi {
+.markazi, .modal-dialog .modal-title {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -457,7 +458,7 @@ main #about span {
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, form, main #specials .special-card, main #specials .card-details, main #about .about-description {
+footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, form, main #specials .special-card, main #specials .card-details, main #about .about-description {
   display: flex;
   flex-direction: column;
 }
@@ -476,11 +477,11 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .location, .fill-btn, .reserve-info .hour-btn, .default-btn, main button {
+.default-shadow, .location, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.transparent-btn, footer form button, .fill-btn, .reserve-info .hour-btn, .default-btn, #homepage-header .reserve-btn, main button {
+.transparent-btn, footer form button, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, #homepage-header .reserve-btn, main button {
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -490,18 +491,18 @@ nav a:hover, #homepage-header .socials a:hover {
   font-weight: 500;
   transition: all 0.075s ease-in;
 }
-.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover {
+.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .modal-dialog .submit-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover {
   background-color: #f4ce14;
   color: #333333;
   transition: all 0.075s ease-in;
 }
 
-.fill-btn, .reserve-info .hour-btn, .default-btn, main button {
+.fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   background-color: #f4ce14;
   color: #333333;
   border: 1px solid #f4ce14;
 }
-.fill-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, main button:hover {
+.fill-btn:hover, .modal-dialog .submit-btn:hover, .reserve-info .hour-btn:hover, .default-btn:hover, main button:hover {
   background-color: transparent;
 }
 
@@ -510,11 +511,11 @@ nav a:hover, #homepage-header .socials a:hover {
   padding: 12px 32px;
 }
 
-.link-btn, .location .location-details .text-link {
+.link-btn, .location .text-link {
   color: #333333 !important;
   transition: all 0.075s ease-in;
 }
-.link-btn:hover, .location .location-details .text-link:hover {
+.link-btn:hover, .location .text-link:hover {
   color: #495e57 !important;
   transition: all 0.075s ease-in;
 }
@@ -565,6 +566,7 @@ svg {
 }
 .reserve-info .hour-btn {
   font-size: 1.6rem;
+  padding: 0;
   width: 124px;
   aspect-ratio: 8/3;
 }
@@ -597,42 +599,43 @@ form .form-join *:focus {
   border-radius: 4px;
 }
 .location iframe {
-  width: 40%;
+  width: 45%;
   height: 400px;
   border-radius: 4px 0 0 4px;
 }
 .location .location-info {
   width: 350px;
   padding: 32px;
+  gap: 16px;
 }
 .location .location-info h3 {
   color: #495e57;
   font-size: 3.2rem;
 }
-.location .location-details {
-  margin-top: 32px;
+.location .location-info p {
+  color: #333333;
+  font-size: 1.6rem;
 }
-.location .location-details .text-link {
+.location .text-link {
   text-decoration: underline !important;
   text-decoration-thickness: 1px !important;
   font-size: 1.6rem;
   text-underline-offset: 2px;
 }
-.location .location-details .socials {
+.location .socials {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
 }
-.location .location-details .socials a {
+.location .socials a {
   color: #333333 !important;
   transition: all 0.075s ease-in;
 }
-.location .location-details .socials a:hover {
+.location .socials a:hover {
   color: #495e57 !important;
   transition: all 0.075s ease-in;
 }
 
-.markazi {
+.markazi, .modal-dialog .modal-title {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -653,7 +656,7 @@ form .form-join *:focus {
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, form {
+footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -672,11 +675,11 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
+.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.transparent-btn, footer form button, .fill-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn {
+.transparent-btn, footer form button, .fill-btn, .modal-dialog .submit-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn {
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -686,18 +689,18 @@ nav a:hover, #homepage-header .socials a:hover {
   font-weight: 500;
   transition: all 0.075s ease-in;
 }
-.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
+.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .modal-dialog .submit-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
   background-color: #f4ce14;
   color: #333333;
   transition: all 0.075s ease-in;
 }
 
-.fill-btn, .default-btn, main button, .reserve-info .hour-btn {
+.fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn {
   background-color: #f4ce14;
   color: #333333;
   border: 1px solid #f4ce14;
 }
-.fill-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
+.fill-btn:hover, .modal-dialog .submit-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
   background-color: transparent;
 }
 
@@ -706,11 +709,11 @@ nav a:hover, #homepage-header .socials a:hover {
   padding: 12px 32px;
 }
 
-.link-btn, .location .location-details .text-link {
+.link-btn, .location .text-link {
   color: #333333 !important;
   transition: all 0.075s ease-in;
 }
-.link-btn:hover, .location .location-details .text-link:hover {
+.link-btn:hover, .location .text-link:hover {
   color: #495e57 !important;
   transition: all 0.075s ease-in;
 }
@@ -752,7 +755,7 @@ option {
   border-radius: 4px;
 }
 
-.markazi {
+.markazi, .modal-dialog .modal-title {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -773,7 +776,7 @@ option {
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, form {
+footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -792,11 +795,11 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
+.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.transparent-btn, footer form button, .fill-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn {
+.transparent-btn, footer form button, .fill-btn, .modal-dialog .submit-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn {
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -806,18 +809,18 @@ nav a:hover, #homepage-header .socials a:hover {
   font-weight: 500;
   transition: all 0.075s ease-in;
 }
-.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
+.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .modal-dialog .submit-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
   background-color: #f4ce14;
   color: #333333;
   transition: all 0.075s ease-in;
 }
 
-.fill-btn, .default-btn, main button, .reserve-info .hour-btn {
+.fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn {
   background-color: #f4ce14;
   color: #333333;
   border: 1px solid #f4ce14;
 }
-.fill-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
+.fill-btn:hover, .modal-dialog .submit-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
   background-color: transparent;
 }
 
@@ -826,11 +829,11 @@ nav a:hover, #homepage-header .socials a:hover {
   padding: 12px 32px;
 }
 
-.link-btn, .location .location-details .text-link {
+.link-btn, .location .text-link {
   color: #333333 !important;
   transition: all 0.075s ease-in;
 }
-.link-btn:hover, .location .location-details .text-link:hover {
+.link-btn:hover, .location .text-link:hover {
   color: #495e57 !important;
   transition: all 0.075s ease-in;
 }
@@ -879,7 +882,7 @@ svg {
   border-radius: 0 0px 4px 0;
 }
 
-.markazi {
+.markazi, .modal-dialog .modal-title {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -900,7 +903,7 @@ svg {
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, form {
+footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -919,11 +922,11 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
+.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.transparent-btn, footer form button, .fill-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn {
+.transparent-btn, footer form button, .fill-btn, .modal-dialog .submit-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn {
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -933,18 +936,18 @@ nav a:hover, #homepage-header .socials a:hover {
   font-weight: 500;
   transition: all 0.075s ease-in;
 }
-.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
+.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .modal-dialog .submit-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
   background-color: #f4ce14;
   color: #333333;
   transition: all 0.075s ease-in;
 }
 
-.fill-btn, .default-btn, main button, .reserve-info .hour-btn {
+.fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn {
   background-color: #f4ce14;
   color: #333333;
   border: 1px solid #f4ce14;
 }
-.fill-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
+.fill-btn:hover, .modal-dialog .submit-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover {
   background-color: transparent;
 }
 
@@ -953,11 +956,190 @@ nav a:hover, #homepage-header .socials a:hover {
   padding: 12px 32px;
 }
 
-.link-btn, .location .location-details .text-link {
+.link-btn, .location .text-link {
   color: #333333 !important;
   transition: all 0.075s ease-in;
 }
-.link-btn:hover, .location .location-details .text-link:hover {
+.link-btn:hover, .location .text-link:hover {
+  color: #495e57 !important;
+  transition: all 0.075s ease-in;
+}
+
+.lemon-bg, #testimonials, main #specials {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-size: cover;
+}
+
+.text-danger {
+  font-weight: 500;
+}
+
+svg {
+  vertical-align: -15em;
+  margin-bottom: -0.0625em;
+}
+
+p svg {
+  margin-top: -5px;
+  margin-right: 8px;
+}
+
+.modal-dialog {
+  font-size: 1.6rem;
+}
+.modal-dialog .modal-header {
+  padding: 18px 32px;
+  border-bottom: 0.8px solid gainsboro;
+}
+.modal-dialog .modal-title {
+  font-size: 2.8rem;
+  color: #495e57;
+}
+.modal-dialog .modal-body {
+  color: #333333;
+  padding: 0;
+}
+.modal-dialog .reservation-details {
+  padding: 18px 32px;
+  gap: 8px;
+}
+.modal-dialog .reservation-details h6 {
+  font-size: 2.4rem;
+  color: #495e57;
+}
+.modal-dialog .reservation-details .icon-info {
+  display: flex;
+  gap: 16px;
+}
+.modal-dialog .reservation-policy {
+  background-color: #f6f6f6;
+  justify-content: center;
+}
+.modal-dialog .reservation-policy p {
+  padding: 36px 0 !important;
+  margin: 0 32px !important;
+}
+.modal-dialog .reservation-policy p:not(:last-child) {
+  border-bottom: 1px solid gainsboro;
+}
+.modal-dialog .reservation-policy .cancellation-policy {
+  display: flex;
+  gap: 64px;
+  font-size: 1.4rem;
+}
+.modal-dialog .reservation-policy .cancellation-policy p {
+  text-align: left;
+}
+.modal-dialog .reservation-policy .cancellation-policy span {
+  text-wrap: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
+}
+.modal-dialog .reservation-policy .privacy-policy {
+  text-align: center;
+  font-size: 1.2rem !important;
+}
+.modal-dialog .modal-footer {
+  display: flex;
+  justify-content: center !important;
+  font-size: 1.6rem;
+  padding: 18px 32px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.modal-dialog .submit-btn {
+  width: 100%;
+  align-items: center;
+  padding: 12px 32px;
+  font-size: 1.6rem !important;
+}
+
+.spinner {
+  justify-self: center;
+  color: gainsboro;
+  margin: 64px auto;
+}
+
+.markazi, .modal-dialog .modal-title {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-elite, main #about span {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flex-col, footer .hours,
+footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info, .modal-dialog .modal-body, .modal-dialog .reservation-details, .modal-dialog .reservation-policy {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-yellow, footer a,
+footer .lower button, nav button,
+nav a, #homepage-header .socials a {
+  cursor: pointer;
+  color: white;
+  transition: all 0.075s ease-in;
+}
+.to-yellow:hover, footer a:hover,
+footer .lower button:hover, nav button:hover,
+nav a:hover, #homepage-header .socials a:hover {
+  color: #f4ce14 !important;
+  transition: all 0.075s ease-in;
+}
+
+.default-shadow, .fill-btn, .default-btn, main button, .reserve-info .hour-btn, .location, .modal-dialog .submit-btn {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.transparent-btn, footer form button, .fill-btn, .default-btn, #homepage-header .reserve-btn, main button, .reserve-info .hour-btn, .modal-dialog .submit-btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f4ce14;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.075s ease-in;
+}
+.transparent-btn:hover, footer form button:hover, .fill-btn:hover, .default-btn:hover, #homepage-header .reserve-btn:hover, main button:hover, .reserve-info .hour-btn:hover, .modal-dialog .submit-btn:hover {
+  background-color: #f4ce14;
+  color: #333333;
+  transition: all 0.075s ease-in;
+}
+
+.fill-btn, .default-btn, main button, .reserve-info .hour-btn, .modal-dialog .submit-btn {
+  background-color: #f4ce14;
+  color: #333333;
+  border: 1px solid #f4ce14;
+}
+.fill-btn:hover, .default-btn:hover, main button:hover, .reserve-info .hour-btn:hover, .modal-dialog .submit-btn:hover {
+  background-color: transparent;
+}
+
+.default-btn, main button {
+  font-size: 1.6rem;
+  padding: 12px 32px;
+}
+
+.link-btn, .location .text-link {
+  color: #333333 !important;
+  transition: all 0.075s ease-in;
+}
+.link-btn:hover, .location .text-link:hover {
   color: #495e57 !important;
   transition: all 0.075s ease-in;
 }

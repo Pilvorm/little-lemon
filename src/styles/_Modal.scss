@@ -1,0 +1,104 @@
+@import "../variables";
+
+$modal-x-space: 32px;
+
+p svg {
+  margin-top: -5px;
+  margin-right: 8px;
+}
+
+.modal-dialog {
+  font-size: 1.6rem;
+
+  .modal-header {
+    padding: 18px $modal-x-space;
+    border-bottom: 0.8px solid gainsboro;
+  }
+
+  .modal-title {
+    @extend .markazi;
+    font-size: 2.8rem;
+    color: $primary-green;
+  }
+
+  .modal-body {
+    @extend .flex-col;
+    color: $highlight-black;
+    padding: 0;
+  }
+
+  .reservation-details {
+    padding: 18px $modal-x-space;
+    @extend .flex-col;
+    gap: 8px;
+
+    h6 {
+      font-size: 2.4rem;
+      color: $primary-green;
+    }
+
+    .icon-info {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  .reservation-policy {
+    background-color: $gray-50;
+    @extend .flex-col;
+    justify-content: center;
+
+    p {
+      padding: 36px 0 !important;
+      margin: 0 $modal-x-space !important;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid gainsboro;
+      }
+    }
+
+    .cancellation-policy {
+      display: flex;
+      gap: 64px;
+      font-size: 1.4rem;
+
+      p {
+        text-align: left;
+      }
+
+      span {
+        text-wrap: nowrap;
+        width: fit-content;
+        font-weight: 700;
+      }
+    }
+
+    .privacy-policy {
+        text-align: center;
+      font-size: 1.2rem !important;
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center !important;
+    font-size: 1.6rem;
+    padding: 18px $modal-x-space;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .submit-btn {
+    @extend .fill-btn;
+    width: 100%;
+    align-items: center;
+    padding: 12px 32px;
+    font-size: 1.6rem !important;
+  }
+}
+
+.spinner {
+    justify-self: center;
+    color: gainsboro;
+    margin: 64px auto;
+}

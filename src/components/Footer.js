@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer>
       <div className="upper">
-        <p>140 West 4th Street | NY, NY 10012</p>
+        <p>W Montrose Ave 34th | Chicago, IL</p>
         <div className="footer-socials">
           <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
             <FaInstagram size={24} />
@@ -24,7 +24,7 @@ function Footer() {
             <FaFacebookF size={24} />
           </a>
         </div>
-        <p className="right">+1 (347) 799-1312</p>
+        <p className="right">+1 (312) 773-2305</p>
       </div>
       <div className="mid info">
         <div className="hours">

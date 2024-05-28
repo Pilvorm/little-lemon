@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { RiMenu3Fill, RiCloseLargeFill } from "react-icons/ri";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Offcanvas} from "reactstrap";
+import { Offcanvas } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
@@ -56,10 +56,10 @@ function Nav({ background }) {
             </div>
             <div className="offcanvas-body">
               <div className="offcanvas-nav">
-                <button>Home</button>
+                <Link to={`/`}>Home</Link>
                 <button>About</button>
                 <button>Menu</button>
-                <button>Reservations</button>
+                <Link to={`reservation`}>Reservations</Link>
                 <div className="offcanvas-socials">
                   <a
                     href="https://www.instagram.com/"
