@@ -13,14 +13,14 @@
   font-style: normal;
 }
 
-.special-elite, main #about span {
+.special-elite, .two-side span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, form, main #about .about-description, main #specials .card-details, main #specials .special-card {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, .reserve-info form, main #specials .card-details, main #specials .special-card {
   display: flex;
   flex-direction: column;
 }
@@ -39,7 +39,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .location, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
+.default-shadow, .location, .reserve-info form .form-join, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -82,7 +82,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.lemon-bg, #testimonials, main #specials {
+.lemon-bg, #testimonials, #reserve-section, main #specials {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -271,60 +271,16 @@ main #specials .price-tag-decimal {
 main #specials .description {
   color: #333333;
 }
-main #about .about-section {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-main #about .about-section:nth-child(even) .img-container {
-  order: 1;
-}
-main #about .img-container {
-  max-width: 100%;
-  height: 100%;
-  padding: 0px;
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-main #about .image-1 {
+main .about .image-1 {
   background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.5), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg.jpg");
 }
-main #about .image-2 {
+main .about .image-2 {
   background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.3), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg-3.jpg");
   background-position: 0 0;
 }
-main #about .image-3 {
+main .about .image-3 {
   background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.5), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg-4.jpg");
   background-position: 0 100%;
-}
-main #about img {
-  width: 90%;
-  aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main #about .about-description {
-  justify-content: center;
-  gap: 32px;
-  padding: 64px;
-}
-main #about h2 {
-  color: #495e57;
-  font-size: 3.6rem;
-}
-main #about p {
-  color: #333333;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.5;
-}
-main #about span {
-  color: #495e57;
-  font-weight: 500;
-  font-size: 2rem;
 }
 
 @keyframes water {
@@ -381,15 +337,6 @@ main #about span {
   main #specials .price-tag-decimal {
     font-size: 2rem;
   }
-  main #about h2 {
-    font-size: 2.8rem;
-  }
-  main #about p {
-    font-size: 1.4rem;
-  }
-  main #about span {
-    font-size: 1.8rem;
-  }
 }
 @media only screen and (max-width: 576px) {
   #homepage-header {
@@ -426,16 +373,6 @@ main #about span {
     display: flex;
     justify-content: space-between;
   }
-  main #about .about-section {
-    display: flex;
-    flex-direction: column;
-  }
-  main #about .about-section:nth-child(even) .img-container {
-    order: -1;
-  }
-  main #about .about-description {
-    padding: 32px;
-  }
 }
 .markazi, .modal-dialog .modal-title {
   font-family: "Markazi Text", serif;
@@ -451,14 +388,14 @@ main #about span {
   font-style: normal;
 }
 
-.special-elite, main #about span {
+.special-elite, .two-side span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, form, main #specials .special-card, main #specials .card-details, main #about .about-description {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, .reserve-info form, main #specials .special-card, main #specials .card-details {
   display: flex;
   flex-direction: column;
 }
@@ -477,7 +414,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .location, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
+.default-shadow, .location, .reserve-info form .form-join, .fill-btn, .modal-dialog .submit-btn, .reserve-info .hour-btn, .default-btn, main button {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -520,7 +457,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.lemon-bg, #testimonials, main #specials {
+.lemon-bg, #testimonials, #reserve-section, main #specials {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -540,13 +477,10 @@ svg {
   background-position: 40% 70%;
 }
 
-#reserve-main {
+#reserve-section {
   padding: 86px 124px;
 }
 
-#reserve-header {
-  display: flex;
-}
 #reserve-header h2 {
   font-size: 3.6rem;
   color: #495e57;
@@ -556,6 +490,28 @@ svg {
   display: flex;
   justify-content: space-between;
   margin-top: 42px;
+}
+.reserve-info form {
+  font-size: 1.6rem;
+  gap: 32px;
+  border-bottom: 1px solid gainsboro;
+}
+.reserve-info form .form-join {
+  background-color: white;
+  padding: 0 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.reserve-info form .form-join * {
+  border: none;
+  width: 33%;
+}
+.reserve-info form .form-join *:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 .reserve-info .reserve-hours {
   margin-top: 16px;
@@ -571,31 +527,8 @@ svg {
   aspect-ratio: 8/3;
 }
 
-form {
-  font-size: 1.6rem;
-  gap: 32px;
-}
-form .form-join {
-  border: 1px solid gainsboro;
-  padding: 0 8px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-form .form-join * {
-  border: none;
-  width: 33%;
-}
-form .form-join *:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-
 .location {
   display: flex;
-  border: 1px solid gainsboro;
   border-radius: 4px;
 }
 .location iframe {
@@ -604,9 +537,11 @@ form .form-join *:focus {
   border-radius: 4px 0 0 4px;
 }
 .location .location-info {
-  width: 350px;
+  background-color: white;
+  width: 100%;
   padding: 32px;
   gap: 16px;
+  border-radius: 0 4px 4px 0;
 }
 .location .location-info h3 {
   color: #495e57;
@@ -627,12 +562,16 @@ form .form-join *:focus {
   gap: 16px;
 }
 .location .socials a {
-  color: #333333 !important;
+  color: #495e57 !important;
   transition: all 0.075s ease-in;
 }
 .location .socials a:hover {
-  color: #495e57 !important;
+  color: #ee9972 !important;
   transition: all 0.075s ease-in;
+}
+
+#promo .image-1 {
+  background-image: linear-gradient(180deg, rgba(73, 94, 87, 0.5), rgba(73, 94, 87, 0.5)), url("./assets/plant-bg.jpg");
 }
 
 .markazi, .modal-dialog .modal-title {
@@ -649,14 +588,14 @@ form .form-join *:focus {
   font-style: normal;
 }
 
-.special-elite, main #about span {
+.special-elite, .two-side span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -675,7 +614,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
+.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info form .form-join, .reserve-info .hour-btn, .location {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -718,7 +657,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.lemon-bg, #testimonials, main #specials {
+.lemon-bg, #testimonials, main #specials, #reserve-section {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -769,14 +708,14 @@ option {
   font-style: normal;
 }
 
-.special-elite, main #about span {
+.special-elite, .two-side span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -795,7 +734,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
+.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info form .form-join, .reserve-info .hour-btn, .location {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -838,7 +777,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.lemon-bg, #testimonials, main #specials {
+.lemon-bg, #testimonials, main #specials, #reserve-section {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -856,7 +795,7 @@ svg {
   color: #333333;
 }
 .flatpickr-calendar .flatpickr-day.selected, .flatpickr-calendar .flatpickr-day.selected:hover {
-  background: #f4ce14;
+  background: #fbdabb;
   color: black;
   border-color: transparent;
 }
@@ -896,14 +835,14 @@ svg {
   font-style: normal;
 }
 
-.special-elite, main #about span {
+.special-elite, .two-side span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -922,7 +861,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info .hour-btn, .location {
+.default-shadow, .fill-btn, .modal-dialog .submit-btn, .default-btn, main button, .reserve-info form .form-join, .reserve-info .hour-btn, .location {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -965,7 +904,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.lemon-bg, #testimonials, main #specials {
+.lemon-bg, #testimonials, main #specials, #reserve-section {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -1015,11 +954,13 @@ p svg {
   background-color: #f6f6f6;
   justify-content: center;
 }
-.modal-dialog .reservation-policy p {
+.modal-dialog .reservation-policy .cancellation-policy,
+.modal-dialog .reservation-policy .privacy-policy {
   padding: 36px 0 !important;
   margin: 0 32px !important;
 }
-.modal-dialog .reservation-policy p:not(:last-child) {
+.modal-dialog .reservation-policy .cancellation-policy:not(:last-child),
+.modal-dialog .reservation-policy .privacy-policy:not(:last-child) {
   border-bottom: 1px solid gainsboro;
 }
 .modal-dialog .reservation-policy .cancellation-policy {
@@ -1039,6 +980,14 @@ p svg {
 .modal-dialog .reservation-policy .privacy-policy {
   text-align: center;
   font-size: 1.2rem !important;
+}
+.modal-dialog .confirmation {
+  padding: 32px 0;
+  text-align: center;
+}
+.modal-dialog .confirmation h6 {
+  color: #495e57;
+  font-size: 3.2rem;
 }
 .modal-dialog .modal-footer {
   display: flex;
@@ -1075,14 +1024,14 @@ p svg {
   font-style: normal;
 }
 
-.special-elite, main #about span {
+.special-elite, .two-side span {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 .flex-col, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, main #about .about-description, form, .location .location-info, .modal-dialog .modal-body, .modal-dialog .reservation-details, .modal-dialog .reservation-policy {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info, .modal-dialog .modal-body, .modal-dialog .reservation-details, .modal-dialog .reservation-policy {
   display: flex;
   flex-direction: column;
 }
@@ -1101,7 +1050,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.default-shadow, .fill-btn, .default-btn, main button, .reserve-info .hour-btn, .location, .modal-dialog .submit-btn {
+.default-shadow, .fill-btn, .default-btn, main button, .reserve-info form .form-join, .reserve-info .hour-btn, .location, .modal-dialog .submit-btn {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -1144,7 +1093,7 @@ nav a:hover, #homepage-header .socials a:hover {
   transition: all 0.075s ease-in;
 }
 
-.lemon-bg, #testimonials, main #specials {
+.lemon-bg, #testimonials, main #specials, #reserve-section {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
@@ -1174,6 +1123,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul {
   margin: 0 !important;
@@ -1295,6 +1246,52 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+.two-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.two-side .img-container {
+  max-width: 100%;
+  height: 100%;
+  padding: 0px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.two-side img {
+  width: 90%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.two-side .two-side-description {
+  justify-content: center;
+  gap: 32px;
+  padding: 64px;
+}
+.two-side h2 {
+  color: #495e57;
+  font-size: 3.6rem;
+}
+.two-side p {
+  color: #333333;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.two-side span {
+  color: #495e57;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.two-side:nth-child(even) .img-container {
+  order: 1;
+}
+
 #testimonials {
   padding: 64px 124px;
   display: flex;
@@ -1360,7 +1357,7 @@ footer .hours p {
 }
 footer form {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 footer form input {
@@ -1408,6 +1405,15 @@ footer .footer-nav {
   }
 }
 @media only screen and (max-width: 768px) {
+  .two-side h2 {
+    font-size: 2.8rem;
+  }
+  .two-side p {
+    font-size: 1.4rem;
+  }
+  .two-side span {
+    font-size: 1.8rem;
+  }
   #testimonials p {
     font-size: 1.4rem;
   }
@@ -1419,6 +1425,16 @@ footer .footer-nav {
   header {
     padding: 0px 16px;
     align-items: center;
+  }
+  .two-side {
+    display: flex;
+    flex-direction: column;
+  }
+  .two-side:nth-child(even) .img-container {
+    order: -1;
+  }
+  .two-side .two-side-description {
+    padding: 32px;
   }
   #testimonials {
     padding: 64px 16px;

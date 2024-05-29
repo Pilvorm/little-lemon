@@ -4,8 +4,8 @@ import table from "../../assets/restaurant-4.jpg";
 
 function About() {
   return (
-    <section id="about">
-      <div className="about-section">
+    <section id="about" className="about">
+      <div className="two-side">
         <div className="img-container image-1">
           <img
             alt="Little Lemon Restaurant"
@@ -13,7 +13,7 @@ function About() {
             style={{ objectPosition: "0 60%" }}
           />
         </div>
-        <div className="about-description">
+        <div className="two-side-description">
           <h2 className="special-elite">Little Lemon</h2>
           <p>
             Nestled in the bustling heart of <span>Chicago</span>, Little Lemon
@@ -42,7 +42,7 @@ function About() {
         </div>
       </div>
 
-      <div className="about-section">
+      <div className="two-side">
         <div className="img-container image-2">
           <img
             alt="Little Lemon Founder"
@@ -50,7 +50,7 @@ function About() {
             style={{ objectPosition: "55% 50%" }}
           />
         </div>
-        <div className="about-description">
+        <div className="two-side-description">
           <h2 className="special-elite">How It Came to Be</h2>
           <p>
             Drawn together by their mutual love for Mediterranean cuisine and
@@ -84,7 +84,7 @@ function About() {
         </div>
       </div>
 
-      <div className="about-section">
+      <div className="two-side">
         <div className="img-container image-3">
           <img
             alt="Little Lemon Restaurant Table"
@@ -92,7 +92,7 @@ function About() {
             style={{ objectPosition: "0 60%" }}
           />
         </div>
-        <div className="about-description">
+        <div className="two-side-description">
           <h2 className="special-elite">Reservation</h2>
           <p>
             Little Lemon is ideal for making special occasions, or for making

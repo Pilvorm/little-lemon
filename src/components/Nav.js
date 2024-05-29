@@ -59,7 +59,7 @@ function Nav({ background }) {
                 <Link to={`/`}>Home</Link>
                 <button>About</button>
                 <button>Menu</button>
-                <Link to={`reservation`}>Reservations</Link>
+                <Link to={`/reservation/`}>Reservations</Link>
                 <div className="offcanvas-socials">
                   <a
                     href="https://www.instagram.com/"
@@ -85,7 +85,7 @@ function Nav({ background }) {
           <Link to={`/`}>Home</Link>
           <button>About</button>
           <button>Menu</button>
-          <Link to={`reservation`}>Reservations</Link>
+          <Link to={`/reservation/`}>Reservations</Link>
           <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
             <FaInstagram size={24} />
           </a>

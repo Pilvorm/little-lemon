@@ -48,7 +48,8 @@ p svg {
     @extend .flex-col;
     justify-content: center;
 
-    p {
+    .cancellation-policy,
+    .privacy-policy {
       padding: 36px 0 !important;
       margin: 0 $modal-x-space !important;
 
@@ -74,8 +75,18 @@ p svg {
     }
 
     .privacy-policy {
-        text-align: center;
+      text-align: center;
       font-size: 1.2rem !important;
+    }
+  }
+
+  .confirmation {
+    padding: 32px 0;
+    text-align: center;
+
+    h6 {
+      color: $primary-green;
+      font-size: 3.2rem;
     }
   }
 
@@ -98,7 +109,7 @@ p svg {
 }
 
 .spinner {
-    justify-self: center;
-    color: gainsboro;
-    margin: 64px auto;
+  justify-self: center;
+  color: gainsboro;
+  margin: 64px auto;
 }

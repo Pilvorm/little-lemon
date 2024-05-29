@@ -7,13 +7,12 @@
   background-position: 40% 70%;
 }
 
-#reserve-main {
+#reserve-section {
+  @extend .lemon-bg;
   padding: 86px $x-space;
 }
 
 #reserve-header {
-  display: flex;
-
   h2 {
     font-size: 3.6rem;
     color: $primary-green;
@@ -25,6 +24,35 @@
   justify-content: space-between;
   // gap: 32px;
   margin-top: 42px;
+
+  form {
+    @extend .flex-col;
+    font-size: 1.6rem;
+    gap: 32px;
+    border-bottom: 1px solid gainsboro;
+
+    .form-join {
+      @extend .default-shadow;
+      background-color: white;
+      // border: 1px solid gainsboro;
+      padding: 0 8px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+
+      * {
+        border: none;
+        width: 33%;
+
+        &:focus {
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
 
   .reserve-hours {
     margin-top: 16px;
@@ -43,48 +71,11 @@
   }
 }
 
-form {
-  font-size: 1.6rem;
-  @extend .flex-col;
-  gap: 32px;
-
-  .form-join {
-    border: 1px solid gainsboro;
-    padding: 0 8px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-
-    * {
-      border: none;
-      // outline: 1px solid red;
-      // border-right: 1px solid gainsboro;
-      width: 33%;
-
-      &:focus {
-        outline: none;
-        border: none;
-        box-shadow: none;
-      }
-
-      // *:not(:last-child) {
-      //   border-right: 1px solid gainsboro;
-      // }
-    }
-
-    // *:not(:first-child) {
-    //   border: none;
-    //   border-left: 1px solid gainsboro;
-    // }
-  }
-}
-
 .location {
-  display: flex;
-  border: 1px solid gainsboro;
-  border-radius: 4px;
   @extend .default-shadow;
+  display: flex;
+  // border: 1px solid gainsboro;
+  border-radius: 4px;
 
   iframe {
     width: 45%;
@@ -93,10 +84,12 @@ form {
   }
 
   .location-info {
-    width: 350px;
+    background-color: white;
+    width: 100%;
     padding: 32px;
     @extend .flex-col;
     gap: 16px;
+    border-radius: 0 4px 4px 0;
 
     h3 {
       color: $primary-green;
@@ -122,13 +115,24 @@ form {
     gap: 16px;
 
     a {
-      color: $highlight-black !important;
+      color: $primary-green !important;
       transition: $text-transition;
-      
+
       &:hover {
-        color: $primary-green !important;
+        color: $secondary-cream !important;
         transition: $text-transition;
       }
     }
+  }
+}
+
+#promo {
+  .image-1 {
+    background-image: linear-gradient(
+        180deg,
+        rgba(73, 94, 87, 0.5),
+        rgba(73, 94, 87, 0.5)
+      ),
+      url("./assets/plant-bg.jpg");
   }
 }

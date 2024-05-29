@@ -30,6 +30,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul {
   margin: 0 !important;
@@ -165,6 +167,59 @@ header {
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+.two-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  .img-container {
+    max-width: 100%;
+    height: 100%;
+    padding: 0px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  img {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .two-side-description {
+    @extend .flex-col;
+    justify-content: center;
+    gap: 32px;
+    padding: 64px;
+  }
+
+  h2 {
+    color: $primary-green;
+    font-size: 3.6rem;
+  }
+
+  p {
+    color: $highlight-black;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  span {
+    color: $primary-green;
+    font-weight: 500;
+    font-size: 2rem;
+    @extend .special-elite;
+  }
+}
+
+.two-side:nth-child(even) .img-container {
+  order: 1;
+}
+
 #testimonials {
   padding: 64px $x-space;
   display: flex;
@@ -255,7 +310,7 @@ footer {
 
   form {
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 16px;
 
     input {
@@ -317,6 +372,20 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  .two-side {
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    span {
+      font-size: 1.8rem;
+    }
+  }
+
   #testimonials {
     p {
       font-size: 1.4rem;
@@ -332,6 +401,19 @@ footer {
   header {
     padding: 0px $x-space-phone;
     align-items: center;
+  }
+
+  .two-side {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(even) .img-container {
+      order: -1;
+    }
+
+    .two-side-description {
+      padding: 32px;
+    }
   }
 
   #testimonials {

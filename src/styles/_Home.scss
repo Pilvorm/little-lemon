@@ -215,28 +215,7 @@ main {
     }
   }
 
-  #about {
-    .about-section {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .about-section:nth-child(even) .img-container {
-      order: 1;
-    }
-
-    .img-container {
-      max-width: 100%;
-      height: 100%;
-      padding: 0px;
-      aspect-ratio: 1 / 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
+  .about {
     .image-1 {
       background-image: linear-gradient(
           180deg,
@@ -264,38 +243,6 @@ main {
         ),
         url("./assets/plant-bg-4.jpg");
       background-position: 0 100%;
-    }
-
-    img {
-      width: 90%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
-
-    .about-description {
-      @extend .flex-col;
-      justify-content: center;
-      gap: 32px;
-      padding: 64px;
-    }
-
-    h2 {
-      color: $primary-green;
-      font-size: 3.6rem;
-    }
-
-    p {
-      color: $highlight-black;
-      font-size: 1.6rem;
-      font-weight: 300;
-      line-height: 1.5;
-    }
-
-    span {
-      color: $primary-green;
-      font-weight: 500;
-      font-size: 2rem;
-      @extend .special-elite;
     }
   }
 }
@@ -369,20 +316,6 @@ main {
         font-size: 2rem;
       }
     }
-
-    #about {
-      h2 {
-        font-size: 2.8rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-
-      span {
-        font-size: 1.8rem;
-      }
-    }
   }
 }
 
@@ -436,22 +369,6 @@ main {
       .card-details {
         display: flex;
         justify-content: space-between;
-      }
-    }
-
-    #about {
-      .about-section {
-        // width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .about-section:nth-child(even) .img-container {
-        order: -1;
-      }
-
-      .about-description {
-        padding: 32px;
       }
     }
   }
