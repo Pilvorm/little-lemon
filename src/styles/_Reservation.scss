@@ -22,16 +22,18 @@
 .reserve-info {
   display: flex;
   justify-content: space-between;
-  // gap: 32px;
+  gap: 32px;
   margin-top: 42px;
 
   form {
+    width: 600px;
     @extend .flex-col;
     font-size: 1.6rem;
     gap: 32px;
     border-bottom: 1px solid gainsboro;
 
     .form-join {
+      width: 100%;
       @extend .default-shadow;
       background-color: white;
       // border: 1px solid gainsboro;
@@ -55,18 +57,18 @@
   }
 
   .reserve-hours {
-    margin-top: 16px;
+    margin: 16px 0;
     align-self: flex-start;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+    grid-gap: 16px;
   }
 
   .hour-btn {
     @extend .fill-btn;
     font-size: 1.6rem;
     padding: 0;
-    width: 124px;
+    width: 100%;
     aspect-ratio: 8 / 3;
   }
 }
@@ -76,16 +78,17 @@
   display: flex;
   // border: 1px solid gainsboro;
   border-radius: 4px;
+  max-height: 400px;
 
   iframe {
     width: 45%;
-    height: 400px;
     border-radius: 4px 0 0 4px;
   }
 
   .location-info {
     background-color: white;
     width: 100%;
+    max-height: 400px;
     padding: 32px;
     @extend .flex-col;
     gap: 16px;
@@ -134,5 +137,92 @@
         rgba(73, 94, 87, 0.5)
       ),
       url("./assets/plant-bg.jpg");
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #reserve-section {
+    padding: 86px $x-space-tablet;
+  }
+
+  .reserve-info {
+    form {
+      width: 400px;
+    }
+
+    .reserve-hours {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-gap: 16px;
+    }
+  }
+
+  .location {
+    width: 350px;
+    height: fit-content;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    iframe {
+      width: 100%;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .location-info {
+      padding: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #reserve-header {
+    h2 {
+      font-size: 2.8rem;
+    }
+  }
+
+  .reserve-info {
+    flex-direction: column;
+
+    form {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+
+    .reserve-hours {
+      margin: 16px 0 32px 0;
+    }
+
+    .hour-btn {
+      font-size: 1.4rem;
+    }
+
+  }
+
+  .location {
+    width: 100%;
+    flex-direction: row;
+    height: 350px;
+
+    iframe {
+      width: 45%;
+    }
+
+    .location-info {
+      h3 {
+        font-size: 2.4rem;
+      }
+
+      .text-link, p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #reserve-section {
+    padding: 86px $x-space-phone;
   }
 }

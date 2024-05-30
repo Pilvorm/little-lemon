@@ -118,7 +118,8 @@ nav {
     @extend .flex-col;
     gap: 36px;
 
-    button {
+    a, button {
+      color: $highlight-black !important;
       width: 100%;
       text-align: right;
       font-size: 2rem;
@@ -128,8 +129,9 @@ nav {
   }
 
   .offcanvas-socials {
+    width: fit-content;
     display: flex;
-    justify-content: flex-end;
+    align-self: flex-end;
     gap: 16px;
   }
 }
@@ -213,6 +215,12 @@ header {
     font-weight: 500;
     font-size: 2rem;
     @extend .special-elite;
+  }
+
+  a {
+    @extend .default-btn;
+    color: $highlight-black !important;
+    width: fit-content;
   }
 }
 
@@ -309,9 +317,9 @@ footer {
   }
 
   form {
-    display: flex;
+    @extend .flex-col;
     justify-content: center;
-    gap: 16px;
+    gap: 8px;
 
     input {
       width: 500px;
@@ -451,7 +459,7 @@ footer {
       }
 
       button {
-        margin: 0;
+        margin: 8px 0 0 0;
       }
     }
 

@@ -1,8 +1,9 @@
+import { useState } from "react";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";
-
-import Logo from "../assets/Logo-White-Text.png";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const validationSchema = yup.object({
@@ -11,6 +12,9 @@ function Footer() {
       .email("Please specify a valid email")
       .required("Please specify an email"),
   });
+
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
 
   return (
     <footer>
@@ -50,18 +54,22 @@ function Footer() {
             }}
             validationSchema={validationSchema}
             onSubmit={async (values) => {
-              // await new Promise((r) => setTimeout(r, 500));
-              // alert(JSON.stringify(values, null, 2));
-              alert(values.email);
+              toggle();
             }}
           >
             {({ errors, touched }) => (
               <Form>
-                <Field id="email" name="email" placeholder="E-Mail" />
-                <button type="submit">Subscribe</button>
+                <div className="form-group">
+                  <Field id="email" name="email" placeholder="E-Mail" />
+                  <button type="submit">Subscribe</button>
+                </div>
                 {errors.email && touched.email ? (
                   <div className="text-danger">{errors.email}</div>
                 ) : null}
+                <Modal isOpen={modal} toggle={toggle}>
+                  <ModalHeader toggle={toggle}>Reservation Details</ModalHeader>
+                  <ModalBody>OK</ModalBody>
+                </Modal>
               </Form>
             )}
           </Formik>
@@ -70,10 +78,10 @@ function Footer() {
       <div className="lower">
         <p>&copy;2024 Little Lemon Chicago</p>
         <div className="mid footer-nav">
-          <button>Home</button>
+          <Link to={"/"}>Home</Link>
           <button>About</button>
           <button>Menu</button>
-          <button>Reservations</button>
+          <Link to={"/reservation"}>Reservations</Link>
         </div>
         <p className="right">
           Developed by{" "}

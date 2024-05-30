@@ -1,5 +1,6 @@
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { TfiLocationPin } from "react-icons/tfi";
+import { Link } from "react-router-dom";
 
 function Header({ refer }) {
   return (
@@ -20,7 +21,7 @@ function Header({ refer }) {
         A family-owned Mediterranean restaurant, focused on traditional recipes
         served with a modern twist.
       </p>
-      <button className="reserve-btn">Reserve a table</button>
+      <Link to={'reservation/'} className="reserve-btn">Reserve a table</Link>
       <div className="socials">
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
           <FaInstagram size={24} />

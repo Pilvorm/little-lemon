@@ -1,6 +1,7 @@
 import restaurant from "../../assets/restaurant-3.jpg";
 import founder from "../../assets/carmy-sydney-4.jpg";
 import table from "../../assets/restaurant-4.jpg";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -105,7 +106,7 @@ function About() {
             prioritize your comfort and satisfaction.
           </p>
 
-          <button className="fill-btn">Reserve a Table</button>
+          <Link to={'reservation/'}>Reserve a Table</Link>
         </div>
       </div>
     </section>

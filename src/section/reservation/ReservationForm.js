@@ -18,7 +18,7 @@ import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.css";
 import * as yup from "yup";
 
-import restaurant from "../../assets/restaurant-3.jpg";
+import restaurant from "../../assets/restaurant-7.jpg";
 
 const GUESTS = 10;
 const occasions = ["No Occasion", "Birthday", "Anniversary"];
@@ -99,7 +99,7 @@ const ReservationModal = ({
         onClick={
           finishedRes
             ? () => {
-                navigate(0);
+                (window.location.href = `/`);
               }
             : () => handleSubmit()
         }

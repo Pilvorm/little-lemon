@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
+import { Offcanvas } from "reactstrap";
 import Logo from "../assets/LogoAlt.png";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { RiMenu3Fill, RiCloseLargeFill } from "react-icons/ri";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Offcanvas } from "reactstrap";
-
 import { Link } from "react-router-dom";
-
 import { useMediaQuery } from "react-responsive";
 
 function Nav({ background }) {
@@ -57,9 +54,9 @@ function Nav({ background }) {
             <div className="offcanvas-body">
               <div className="offcanvas-nav">
                 <Link to={`/`}>Home</Link>
-                <button>About</button>
+                <Link to={'/#about'}>About</Link>
                 <button>Menu</button>
-                <Link to={`/reservation/`}>Reservations</Link>
+                <Link to={`reservation/`}>Reservations</Link>
                 <div className="offcanvas-socials">
                   <a
                     href="https://www.instagram.com/"
@@ -83,9 +80,9 @@ function Nav({ background }) {
       ) : (
         <div className="nav-links">
           <Link to={`/`}>Home</Link>
-          <button>About</button>
+          <Link to={'/#about'}>About</Link>
           <button>Menu</button>
-          <Link to={`/reservation/`}>Reservations</Link>
+          <Link to={`/reservation`}>Reservations</Link>
           <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
             <FaInstagram size={24} />
           </a>

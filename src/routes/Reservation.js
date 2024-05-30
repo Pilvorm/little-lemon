@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
 import App from "../App";
 import Header from "../section/reservation/Header";
 import Testimonials from "../components/Testimonials";
@@ -6,6 +6,10 @@ import ReservationForm from "../section/reservation/ReservationForm";
 import { useInView } from "react-intersection-observer";
 
 function Reservation() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: myRef, inView: visibleHeader } = useInView({
     threshold: 0.1,
   });
@@ -26,8 +30,6 @@ function Reservation() {
       if (random() < 0.5) result.push(i + ":00");
       if (random() > 0.5) result.push(i + ":30");
     }
-    console.log("RESULT");
-    console.log(result);
     return result;
   };
 

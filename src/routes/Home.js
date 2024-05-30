@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import App from "../App";
 import { useInView } from "react-intersection-observer";
 
@@ -7,6 +8,10 @@ import About from "../section/homepage/About";
 import Testimonials from "../components/Testimonials";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   const { ref: myRef, inView: visibleHeader } = useInView({
     threshold: 0.1,
   });
