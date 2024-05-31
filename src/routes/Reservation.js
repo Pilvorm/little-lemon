@@ -34,8 +34,7 @@ function Reservation() {
   };
 
   const updateTimes = (state, action) => {
-    // alert("UPDATE TIMES")
-    return { availableTimes: fetchAPI(new Date()) };
+    return { availableTimes: fetchAPI(action.date) };
   };
 
   const initialState = { availableTimes: fetchAPI(new Date()) };

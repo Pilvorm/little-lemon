@@ -171,7 +171,7 @@ function ReservationForm({ availableTimes, dispatch }) {
                     }}
                     onChange={([date]) => {
                       setDate(date);
-                      dispatch();
+                      dispatch({date: date});
                     }}
                   />
                   <Field as="select" name="occasion" className="field">
