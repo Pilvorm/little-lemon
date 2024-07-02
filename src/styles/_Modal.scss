@@ -28,9 +28,9 @@ p svg {
   }
 
   .reservation-details {
-    padding: 18px $modal-x-space;
     @extend .flex-col;
     gap: 8px;
+    padding: 18px $modal-x-space;
 
     h6 {
       font-size: 2.4rem;
@@ -81,7 +81,9 @@ p svg {
   }
 
   .confirmation {
-    padding: 32px 0;
+    @extend .flex-col;
+    gap: 16px;
+    padding: 32px $modal-x-space;
     text-align: center;
 
     h6 {

@@ -67,8 +67,13 @@ function Footer() {
                   <div className="text-danger">{errors.email}</div>
                 ) : null}
                 <Modal isOpen={modal} toggle={toggle}>
-                  <ModalHeader toggle={toggle}>Reservation Details</ModalHeader>
-                  <ModalBody>OK</ModalBody>
+                  <ModalHeader toggle={toggle}>Subscribed</ModalHeader>
+                  <ModalBody>
+                    <div className="confirmation">
+                      <h6 className="special-elite">Thank you for subscribing!</h6>
+                      <p>You'll receive our weekly news letter including special promos that you can redeem at Little Lemon restaurant.</p>
+                    </div>
+                  </ModalBody>
                 </Modal>
               </Form>
             )}

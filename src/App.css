@@ -20,7 +20,7 @@
 }
 
 .flex-col, footer form, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, .reserve-info form, main #specials .card-details, main #specials .special-card {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .confirmation, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, .reserve-info form, main #specials .card-details, main #specials .special-card {
   display: flex;
   flex-direction: column;
 }
@@ -83,7 +83,7 @@ nav a:hover, #homepage-header .socials a:hover {
 }
 
 .lemon-bg, #testimonials, #reserve-section, main #specials {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
 
@@ -395,7 +395,7 @@ main .about .image-3 {
 }
 
 .flex-col, footer form, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, .reserve-info form, main #specials .special-card, main #specials .card-details {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .confirmation, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, .location .location-info, .reserve-info form, main #specials .special-card, main #specials .card-details {
   display: flex;
   flex-direction: column;
 }
@@ -458,7 +458,7 @@ nav a:hover, #homepage-header .socials a:hover {
 }
 
 .lemon-bg, #testimonials, #reserve-section, main #specials {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
 
@@ -664,7 +664,7 @@ svg {
 }
 
 .flex-col, footer form, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .confirmation, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -727,7 +727,7 @@ nav a:hover, #homepage-header .socials a:hover {
 }
 
 .lemon-bg, #testimonials, main #specials, #reserve-section {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
 
@@ -784,7 +784,7 @@ option {
 }
 
 .flex-col, footer form, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .confirmation, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -847,7 +847,7 @@ nav a:hover, #homepage-header .socials a:hover {
 }
 
 .lemon-bg, #testimonials, main #specials, #reserve-section {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
 
@@ -911,7 +911,7 @@ svg {
 }
 
 .flex-col, footer form, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, .modal-dialog .confirmation, .modal-dialog .reservation-policy, .modal-dialog .reservation-details, .modal-dialog .modal-body, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info {
   display: flex;
   flex-direction: column;
 }
@@ -974,7 +974,7 @@ nav a:hover, #homepage-header .socials a:hover {
 }
 
 .lemon-bg, #testimonials, main #specials, #reserve-section {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
 
@@ -1008,8 +1008,8 @@ p svg {
   padding: 0;
 }
 .modal-dialog .reservation-details {
-  padding: 18px 32px;
   gap: 8px;
+  padding: 18px 32px;
 }
 .modal-dialog .reservation-details h6 {
   font-size: 2.4rem;
@@ -1051,7 +1051,8 @@ p svg {
   font-size: 1.2rem !important;
 }
 .modal-dialog .confirmation {
-  padding: 32px 0;
+  gap: 16px;
+  padding: 32px 32px;
   text-align: center;
 }
 .modal-dialog .confirmation h6 {
@@ -1100,7 +1101,7 @@ p svg {
 }
 
 .flex-col, footer form, footer .hours,
-footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info, .modal-dialog .modal-body, .modal-dialog .reservation-details, .modal-dialog .reservation-policy {
+footer .newsletter, footer, #testimonials .magazines, .two-side .two-side-description, header, .offcanvas .offcanvas-nav, main #specials .special-card, main #specials .card-details, .reserve-info form, .location .location-info, .modal-dialog .modal-body, .modal-dialog .reservation-details, .modal-dialog .reservation-policy, .modal-dialog .confirmation {
   display: flex;
   flex-direction: column;
 }
@@ -1163,7 +1164,7 @@ nav a:hover, #homepage-header .socials a:hover {
 }
 
 .lemon-bg, #testimonials, main #specials, #reserve-section {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(242, 242, 242, 0.5)), url("./assets/lemon-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("./assets/lemon-bg.jpg");
   background-size: cover;
 }
 
