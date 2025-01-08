@@ -32,7 +32,9 @@ function Nav({ background }) {
 
   return (
     <nav className={`${!show && "hidden"} ${background && "nav-background"}`}>
-      <img alt="Little Lemon Logo" src={Logo} className="logo" />
+      <Link to={`/`}>
+        <img alt="Little Lemon Logo" src={Logo} className="logo" />
+      </Link>
       {isMobileWidth ? (
         <>
           <button className="burger" onClick={toggleOffcanvas}>
@@ -45,7 +47,9 @@ function Nav({ background }) {
             direction="end"
           >
             <div className="offcanvas-header">
-              <img alt="Little Lemon Logo" src={Logo} className="logo" />
+              <Link to={`/`}>
+                <img alt="Little Lemon Logo" src={Logo} className="logo" />
+              </Link>
               <button className="burger" onClick={toggleOffcanvas}>
                 <RiCloseLargeFill size={24} />
                 <p>Close</p>
@@ -54,7 +58,7 @@ function Nav({ background }) {
             <div className="offcanvas-body">
               <div className="offcanvas-nav">
                 <Link to={`/`}>Home</Link>
-                <Link to={'/#about'}>About</Link>
+                <Link to={"/#about"}>About</Link>
                 <button>Menu</button>
                 <Link to={`reservation/`}>Reservations</Link>
                 <div className="offcanvas-socials">
@@ -80,7 +84,7 @@ function Nav({ background }) {
       ) : (
         <div className="nav-links">
           <Link to={`/`}>Home</Link>
-          <Link to={'/#about'}>About</Link>
+          <Link to={"/#about"}>About</Link>
           <button>Menu</button>
           <Link to={`/reservation`}>Reservations</Link>
           <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
